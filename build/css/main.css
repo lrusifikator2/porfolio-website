@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none !important;
+}
+
+a:focus, a:active {
+    outline: none !important;
+}
+
+input:focus, input:active {
+    outline: none !important;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*--------------------------------------------------*/
+body {
+    background-color: white;
+}
+
+body {
+    position: relative;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+
+.main-bg {
+    height: 100vh;
+    width: 100%;
+    background-color: #c0f0d0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.main-bg__inner {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.main-bg__row {
+    display: -webkit-box;
+    display: flex;
+}
+
+.main-bg__item {
+    height: 25vh;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.main-bg__item img {
+    display: block;
+    width: 35%;
+    height: 35%;
+    border: 1px solid #333;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.main__inner {
+    margin-top: -7%;
+    margin-left: -12%;
+    display: -webkit-box;
+    display: flex;
+    width: 1000px;
+    height: 480px;
+    -webkit-transform: rotate(-31deg);
+    transform: rotate(-31deg);
+}
+
+.main__row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 25%;
+    border-left: 1px solid white;
+}
+
+.main__row:first-child {
+    width: 50%;
+    height: 100%;
+}
+
+.main__row_middle {
+    margin-top: 0%;
+    height: 150%;
+}
+
+.main__row:last-child {
+    margin-top: 12.8%;
+    height: 100%;
+    border-right: 1px solid white;
+}
+
+.main__item {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    content: "";
+    color: white;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: background-color 0.6s;
+    transition: background-color 0.6s;
+    border-top: 1px solid white;
+}
+
+.main__item:last-child {
+    border-bottom: 1px solid white;
+}
+
+.main__item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main__item_nohover {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main__item_nohover:hover {
+    background-color: transparent;
+}
+
+.main__item_port {
+    height: 115%;
+}
+
+.main__item_port:after {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: -1;
+    top: 1px;
+}
+
+.main__cont {
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    left: 40%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%) rotate(30deg);
+    transform: translate(-50%, -50%) rotate(30deg);
+    font-size: 30px;
+}
+
+.main__cont_b {
+    top: 75%;
+}
+
+.main__cont_main {
+    left: 68%;
+    top: 40%;
+}
+
+/*# sourceMappingURL=../maps/main.css.map */

@@ -1,0 +1,172 @@
+@import "pre.scss";
+//@import "../../fonts/stylesheet.css";
+
+
+body {
+	position: relative;
+	background-color: #cccccc;
+	overflow: hidden;
+}
+
+.container {
+}
+
+.main-bg {
+	height: 100vh;
+	width: 100%;
+	background-color: #c0f0d0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: space-between;
+	}
+	
+	&__row {
+		display: flex;		
+	}
+	&__item {
+
+		height: 25vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			display: block;
+			width: 35%;
+			height: 35%;
+			border: 1px solid #333;
+		}
+	}
+}
+
+$main_border_color: white;
+
+
+.main {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(black, 0.65);
+
+	&__inner {
+		margin-top: -7%;
+		margin-left: -12%;	
+		display: flex;
+		width: 1000px;
+		height: 480px;
+
+		transform: rotate(-31deg);
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		width: 25%;
+		//margin-left: 1px;
+		border-left: 1px solid $main_border_color;
+
+		&:first-child {
+			width: 50%;
+			height: 100%;
+		}
+
+		&_middle {
+			margin-top: 0%;
+			height: 150%;
+		
+		}
+
+		&:last-child {
+			margin-top: 12.8%;
+			height: 100%;
+			border-right: 1px solid $main_border_color;
+		}
+	}
+
+	&__item {
+		display: block;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		
+		content: "";
+		color: white;
+		font-weight: 700;	
+		//margin-top: 1px;
+		position: relative;
+		transition: background-color 0.6s;
+		border-top: 1px solid $main_border_color;
+		
+		&:last-child {
+			border-bottom: 1px solid $main_border_color;
+		}
+
+		&:hover {
+			background-color: rgba(#fff, 0.3);
+		}
+		
+		&_nohover {
+			cursor: default;
+			user-select: none;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+		&_port {
+			height: 115%;
+			&:after {
+				display: block;
+				content: "";
+				width: 1px;
+				height: 100%;
+				background-color: $main_border_color;
+				position: absolute;
+				right: -1;
+				top: 1px;
+			}
+		}
+	}
+
+	&__cont {
+		
+		&_b {
+			top: 75%;
+		}
+
+		&_main {
+			left: 68%;
+			top: 40%;
+		}
+
+
+		display: block;
+		position: absolute;
+		white-space: nowrap;
+		left: 40%;
+		top: 40%;
+		
+		transform: translate(-50%, -50%) rotate(30deg);
+		font-size: 30px;
+	}
+}
+
+
+
+
+
+
+@import "resp.scss";
