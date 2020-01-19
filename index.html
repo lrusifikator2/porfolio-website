@@ -4,77 +4,121 @@
 	<title></title>
 	<link rel="stylesheet" href="build/css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat:100,300,400,500,600,700,800,900|PT+Serif:400,400i,700,700i|Titillium+Web:300,400,600,700,900|Ubuntu:300,300i,400,400i,500,500i,700&display=swap" rel="stylesheet">
+	<noscript>
+		<style>
+			.noscript-alert {
+				visibility: visible;
+				opacity: 1;
+				display: block;
+			}
+
+			.body {
+				visibility: hidden;
+			}
+		</style>
+	</noscript>
 </head>
 <body>
 
+<div class="noscript-alert">
+	Your browser doesn't support JavaScript!	
+</div>
+
 <div class="main-bg">
 	<div class="main-bg__inner container">
-		<div class="main-bg__row">
-			<div class="main-bg__item"><img src="img/main/page_1.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_2.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_3.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
-		</div>
 
 		<div class="main-bg__row">
 			<div class="main-bg__item"><img src="img/main/page_4.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_5.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
 		</div>
 
 		<div class="main-bg__row">
 			<div class="main-bg__item"><img src="img/main/page_3.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_1.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
 		</div>
 		
 		<div class="main-bg__row">
 			<div class="main-bg__item"><img src="img/main/page_4.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_2.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_5.jpg" alt=""></div>
-			<div class="main-bg__item"><img src="img/main/page_6.jpg" alt=""></div>
 		</div>
 	</div>
 </div>
 
-<div class="main">
-	<div class="main__inner container">
-		
+<div class="main" >
+	<div class="main__inner">
 		<div class="main__row">
-			<a href="" class="main__item">
-				<span class="main__cont main__cont_main">
-					<span class="main__title">HI my name is Ruslan</span>
+			<div class="main__item main__item_profile">
+				<span class="main__cont main__cont_profile">
+					<span class="main__greet">Hi! I'm </span>
+					<span class="main__title main__title_prof">Ruslan Yakushev</span>
+					<span class="main__title">web developer</span>
+					<span onclick="window.open('/contactme', '_self')" class="main__messageme">Contact me</span>
+					<span class="main__soc social">
+						<span title="My first github" onclick="window.open('https://github.com/lrusifikator', '_blank')" class="social__link">
+							<span class="social__inner">
+								<img src="img/social/1.png" alt="" class="social__icon">
+								<span class="social__add">1</span>
+							</span>
+						</span>
+
+						<span title="My second github" onclick="window.open('https://github.com/lrusifikator2', '_blank')" class="social__link">
+							<span class="social__inner">
+								<img src="img/social/1.png" alt="" class="social__icon">
+								<span class="social__add">2</span>
+							</span>
+						</span>
+						<span title="My facebook" onclick="window.open('https://facebook.com', '_blank')" class="social__link">
+							<span class="social__inner">
+								<img src="img/social/2.png" alt="" class="social__icon">
+							</span>
+						</span>
+						<span title="My gmail" onclick="window.open('mailto:yakushev.rusl101@gmail.com', '_blank')" class="social__link">
+							<span class="social__inner">
+								<img src="img/social/3.png" alt="" class="social__icon">
+							</span>
+						</span>
+						<span title="My phone number" onclick="window.open('tel:+972532281307', '_blank')" class="social__link">
+							<span class="social__inner">
+								<img src="img/social/4.png" alt="" class="social__icon">
+							</span>
+						</span>
+					</span>
 				</span>
-			</a>
+			</div>
 		</div>
 		<div class="main__row main__row_middle">
-			<a href="" class="main__item main__item">
+			<a href="/about" class="main__item main__item" target="_self">
 				<span class="main__cont main__cont_b">
-					<span class="main__title">about</span>
+					<span class="main__title">	
+						<span class="main__optnumber">01</span>
+						about
+					</span>
 				</span>
 			</a>
-			<a href="" class="main__item">
+			<a href="/resume" class="main__item" target="_self">
 				<span class="main__cont">
-					<span class="main__title">resume</span>
+					<span class="main__title"><span class="main__optnumber">02</span>resume</span>
 				</span>
 			</a>
-			<a href="" class="main__item main__item_port">
+			<a href="/portfolio" class="main__item main__item_port" target="_self">
 				<span class="main__cont">
-					<span class="main__title">portfolio</span>
+					<span class="main__title"><span class="main__optnumber">03</span>portfolio</span>
 				</span>
 			</a>
 		</div>
 		<div class="main__row">
-			<a href="" class="main__item main__item_nohover">
+			<a href="" class="main__item main__item_nohover main__item_br" target="_self">
 				<span class="main__cont">
 					<span class="main__title">Nothing</span>
 				</span>
 			</a>
-			<a href="" class="main__item">
+			<a href="/contacts" class="main__item main__item_br" target="_self">
 				<span class="main__cont">
-					<span class="main__title">Contacts</span>
+					<span class="main__title"><span class="main__optnumber">04</span>Contacts</span>
 				</span>
 			</a>
 			

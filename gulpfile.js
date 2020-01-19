@@ -7,6 +7,7 @@ const { src, dest, parallel, task } = require('gulp');
 const gwatch = require('gulp').watch;
 const browSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
+const ssh = require('gulp-ssh')
 
 /* css */
 const sass = require('gulp-sass');
@@ -23,6 +24,11 @@ const jsinclude = require('gulp-include')
 /* html */
 //const htmlconcat = require('');
 
+const sshConfig = require('./../gulpfile.js').sshConfig;
+var gulpSSH = new ssh({
+  ignoreErrors: false,
+  sshConfig: sshConfig
+});
 
 function css(m=false) {
   let add_func;
@@ -41,6 +47,7 @@ function css(m=false) {
     .pipe(sourcemaps.write('../maps'))
     .pipe(dest("./" + proj_name + "/build/css"))
     .pipe(browSync.stream())
+    .pipe(gulpSSH.dest('/var/www/html/build/css'))
         
 }
 
@@ -58,11 +65,18 @@ function js(m=false) {
     .pipe(sourcemaps.write('../maps'))
     .pipe(dest('./' + proj_name + '/build/js', { sourcemaps: true }))
     .pipe(browSync.stream())
+    .pipe(gulpSSH.dest('/var/www/html/build/js'))
     
 }
 
 function html() {
-  return;
+  return src("./" + proj_name + "/index.html")
+    .pipe(gulpSSH.dest('/var/www/html/'))
+}
+
+function img(){
+  return src("./" + proj_name + "/img/**/*")
+    .pipe(gulpSSH.dest('/var/www/html/img/'));
 }
 
 function watch() {
@@ -70,9 +84,10 @@ function watch() {
     port: 3000, 
     server: {
       baseDir: './' + proj_name
-    }
+    } 
   });
 
+  gwatch('./' + proj_name + '/img/**/*', img);
   gwatch('./' + proj_name + '/scss/**/*.scss', css);
   gwatch('./' + proj_name + '/js/**/*.js', js);
   gwatch('./' + proj_name + '/*.html').on('change', browSync.reload).on('change', html);
