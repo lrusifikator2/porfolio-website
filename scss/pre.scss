@@ -16,8 +16,19 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*--------------------------------------------------*/
-body {
-	background-color: white;
-	
-}
 
+.noscript-alert {
+	color: white;
+	position: absolute;
+	z-index: 1000;
+	background-color: rgba(red, .8);
+	left: 50%;
+	top: 50%;
+	padding: 60px;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	font-weight: 600;
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}

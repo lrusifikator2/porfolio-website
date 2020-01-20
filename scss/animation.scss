@@ -1,0 +1,102 @@
+.animation_1 {
+	user-select: none;
+	animation: rotate .6s, pulse .4s .6s cubic-bezier(0,.98,1,.89) , expand 1s .8s ease forwards;
+}
+
+.animation_about {
+	user-select: none;
+	background-color: rgba(#fff, 0.4);
+	animation: rotate_about .6s ease, pulse_about .4s .6s cubic-bezier(0,.98,1,.89) , expand_about 1s .8s ease forwards;
+			
+}
+
+.animation_cont {
+	animation: rotate_cont .9s ease forwards;
+}
+
+@keyframes rotate_cont {
+	from {
+		transform: rotate(30deg);
+	}
+
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate_about {
+	from {
+		transform: translateY(0) rotate(0);
+	}
+
+	to {
+		transform: translateY(100%) rotate(30deg);
+		color: black;
+	}
+}
+
+
+@keyframes pulse_about {
+	from {
+		color: black;
+		transform: translateY(100%) rotate(30deg) scale(0.98);
+	}
+
+	to {
+		color: black;
+		transform: translateY(100%) rotate(30deg) scale(1);
+	}
+
+}
+
+@keyframes expand_about {
+	from {
+		transform: translateY(100%) rotate(30deg) scale(1);
+		color: black;
+		border: 1px solid rgba(#fff, 0.5);
+	}
+
+	to {
+		transform: translateY(100%) rotate(30deg) scale(1.5);
+		color: white;
+		background-color: transparent;
+		border: 1px solid rgba(#fff, 0);
+	}
+}
+
+@keyframes rotate {
+	from {}
+
+	to {
+		transform: rotate(30deg);
+		color: black;
+	}
+}
+
+@keyframes pulse {
+	from {
+		color: black;
+		transform: rotate(30deg) scale(0.98);
+	}
+
+	to {
+		color: black;
+		transform: rotate(30deg) scale(1);
+	}
+
+}
+
+@keyframes expand {
+	from {
+		transform: rotate(30deg) scale(1);
+		color: black;
+		border: 1px solid rgba(#fff, 0.5);
+	}
+
+	to {
+		transform: rotate(30deg) scale(1.5);
+		color: white;
+		background-color: transparent;
+		border: 1px solid rgba(#fff, 0);
+	}
+}

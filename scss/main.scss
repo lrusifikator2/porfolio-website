@@ -1,29 +1,14 @@
 @import "pre.scss";
 //@import "../../fonts/stylesheet.css";
+@import "animation.scss";
 
 $dark_hover: #333;
 
 body {
 	position: relative;
-	background-color: #cccccc;
+	background-color: white;
 	overflow: hidden;
 	font-family: 'Titillium Web', sans-serif;
-}
-
-.noscript-alert {
-	color: white;
-	position: absolute;
-	z-index: 1000;
-	background-color: rgba(red, .8);
-	left: 50%;
-	top: 50%;
-	padding: 60px;
-	transform: translate(-50%, -50%);
-	font-size: 30px;
-	font-weight: 600;
-	visibility: hidden;
-	opacity: 0;
-	display: none;
 }
 
 .container {
@@ -335,6 +320,27 @@ $main_border_color: white;
 		font-weight: 400;
 	}
 
+}
+
+.animation_whitefade {
+	transition: background-color 1s 0.8s ease;
+	background-color: #fff;
+
+	.main__messageme {
+		transition: color .6s 0.7s ease;
+		color: transparent;
+	}
+}
+
+
+.animation_whitefade_s {
+	transition: background-color 1s ease;
+	background-color: #fff;
+
+	.main__messageme {
+		transition: color .6s ease;
+		color: transparent;
+	}
 }
 
 @import "resp.scss";

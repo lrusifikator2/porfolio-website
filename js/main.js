@@ -32,3 +32,31 @@ main_inner.css("top", "-" + main_inner.height() + "px");
 $(".main__inner").animate( {"left": "-" + main_inner.width() / 7, "top" : "-" + main_inner.height() / 4.9}, 1400);
 
 $(".main__item").toggleClass('main__item_scale');
+
+function animate_open(element, url, open_type) {
+	$(element).addClass("animation_1");
+	$(".main").addClass("animation_whitefade");
+	$(element).find(".main__cont").addClass("animation_cont");
+
+	setTimeout(function(){
+		window.open(url, open_type);
+	}, 1450);
+}
+
+function animate_open_about(url, open_type, underlying_el){
+	$(".main__item_about").addClass("animation_about");
+	$(".main").addClass("animation_whitefade");
+	$(".main__item_about").find(".main__cont").addClass("animation_cont");
+
+	setTimeout(function(){
+		window.open(url, open_type);
+	}, 1450);
+}
+
+function animate_link(url, open_type) {
+	$(".main").addClass("animation_whitefade_s");
+
+	setTimeout(function(){
+		window.open(url, open_type);
+	}, 500);
+}

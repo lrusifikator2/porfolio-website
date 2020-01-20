@@ -20,14 +20,12 @@
 	</noscript>
 </head>
 <body>
-
 <div class="noscript-alert">
 	Your browser doesn't support JavaScript!	
 </div>
 
 <div class="main-bg">
 	<div class="main-bg__inner container">
-
 		<div class="main-bg__row">
 			<div class="main-bg__item"><img src="img/main/page_4.jpg" alt=""></div>
 			<div class="main-bg__item"><img src="img/main/page_5.jpg" alt=""></div>
@@ -56,32 +54,32 @@
 					<span class="main__greet">Hi! I'm </span>
 					<span class="main__title main__title_prof">Ruslan Yakushev</span>
 					<span class="main__title">web developer</span>
-					<span onclick="window.open('/contactme', '_self')" class="main__messageme">Contact me</span>
+					<span onclick="animate_link('/contactme', '_self')" class="main__messageme">Contact me</span>
 					<span class="main__soc social">
-						<span title="My first github" onclick="window.open('https://github.com/lrusifikator', '_blank')" class="social__link">
+						<span title="My first github" onclick="animate_link('https://github.com/lrusifikator', '_self')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/1.png" alt="" class="social__icon">
 								<span class="social__add">1</span>
 							</span>
 						</span>
 
-						<span title="My second github" onclick="window.open('https://github.com/lrusifikator2', '_blank')" class="social__link">
+						<span title="My second github" onclick="animate_link('https://github.com/lrusifikator2', '_self')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/1.png" alt="" class="social__icon">
 								<span class="social__add">2</span>
 							</span>
 						</span>
-						<span title="My facebook" onclick="window.open('https://facebook.com', '_blank')" class="social__link">
+						<span title="My facebook" onclick="animate_link('https://facebook.com', '_self')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/2.png" alt="" class="social__icon">
 							</span>
 						</span>
-						<span title="My gmail" onclick="window.open('mailto:yakushev.rusl101@gmail.com', '_blank')" class="social__link">
+						<span title="My gmail" onclick="animate_link('mailto:yakushev.rusl101@gmail.com', '_self')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/3.png" alt="" class="social__icon">
 							</span>
 						</span>
-						<span title="My phone number" onclick="window.open('tel:+972532281307', '_blank')" class="social__link">
+						<span title="My phone number" onclick="animate_link('tel:+972532281307', '_self')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/4.png" alt="" class="social__icon">
 							</span>
@@ -91,39 +89,37 @@
 			</div>
 		</div>
 		<div class="main__row main__row_middle">
-			<a href="/about" class="main__item main__item" target="_self">
+			<div onclick="animate_open_about('/about', '_self', 'main__item_resume')" class="main__item main__item_about">
 				<span class="main__cont main__cont_b">
 					<span class="main__title">	
 						<span class="main__optnumber">01</span>
 						about
 					</span>
 				</span>
-			</a>
-			<a href="/resume" class="main__item" target="_self">
+			</div>
+			<div onclick="animate_open(this,'/resume', '_self')" class="main__item">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">02</span>resume</span>
 				</span>
-			</a>
-			<a href="/portfolio" class="main__item main__item_port" target="_self">
+			</div>
+			<div onclick="animate_open(this,'/portfolio', '_self')" class="main__item main__item_port">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">03</span>portfolio</span>
 				</span>
-			</a>
+			</div>
 		</div>
 		<div class="main__row">
-			<a href="" class="main__item main__item_nohover main__item_br" target="_self">
+			<a class="main__item main__item_nohover main__item_br">
 				<span class="main__cont">
 					<span class="main__title">Nothing</span>
 				</span>
 			</a>
-			<a href="/contacts" class="main__item main__item_br" target="_self">
+			<div onclick="animate_open(this,'/contacts', '_self')" class="main__item main__item_br">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">04</span>Contacts</span>
 				</span>
-			</a>
-			
+			</div>
 		</div>
-
 	</div>
 </div>
 
