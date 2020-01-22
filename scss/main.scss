@@ -65,17 +65,17 @@ body {
 }
 
 @keyframes colorchange {
-	0%   {background: white;}
+	0%    {background: white;}
 	10%   {background: white;}
 	20%   {background: rgba(#cdf8e6, 0.5);}
-	30%   {background: rgba(#6fffdf, 0.5);}
-	40%  {background: rgba(#ffff50, 0.5);}
-	50%   {background: rgba(#ffc520, 0.5);}
-	60%  {background: rgba(#5050ff, 0.5);}
-	70%   {background: rgba(#9e6e2a, 0.5);}
-	80%  {background: rgba(#70ff70, 0.5);}
-	90% {background: rgba(#ff5050, 0.5);}
-	100%   {background: white;}
+	30%   {background: rgba(#6fffdf, 0.1);}
+	40%   {background: rgba(#ffff50, 0.2);}
+	50%   {background: rgba(#ffc520, 0.2);}
+	60%   {background: rgba(#5050ff, 0.1);}
+	70%   {background: rgba(#9e6e2a, 0.1);}
+	80%   {background: rgba(#70ff70, 0.1);}
+	90%   {background: rgba(#ff5050, 0.1);}
+	100%  {background: white;}
 }
 
 $main_border_color: white;
@@ -87,7 +87,6 @@ $main_border_color: white;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(black, 0.8);
-	//background-color: rgba(d34b4d, 0.6);
 
 	&__inner {
 		position: absolute;
@@ -112,8 +111,8 @@ $main_border_color: white;
 		&_middle {
 			margin-top: 2.7%;
 			height: 130%;
-			margin-left: -1px;
-			margin-right: -1px;
+			//margin-left: -1px;
+			//margin-right: -1px;
 		}
 
 		&:last-child {
@@ -122,8 +121,7 @@ $main_border_color: white;
 			
 		}
 	}
-	
-
+		
 	&__item {
 		z-index: 5;
 		display: block;
@@ -133,13 +131,14 @@ $main_border_color: white;
 		
 		content: "";
 		color: white;
-
+		
+		border: 1px solid $main_border_color;
 		font-weight: 700;	
 		position: relative;
 		transition: background-color 0.7s, transform 1.6s ease-in-out;
 		transform: scale(0);
 
-		border: 1px solid $main_border_color;
+		
 		margin-bottom: -1px;
 		
 		&:hover {
@@ -149,6 +148,7 @@ $main_border_color: white;
 		&_scale {
   			transform: scale(1);
 		}
+
 		&_nohover {
 			cursor: default;
 			background-color: transparent;
@@ -164,9 +164,14 @@ $main_border_color: white;
 
 		&_profile {
 			cursor: default;
+			background-color: rgba(#fff, 0.2);
 		}
 	}
 	
+	&__item_r {}
+
+	&__item_l {}
+
 	&__greet  {
 		font-size: 22px;
 		font-weight: 300;

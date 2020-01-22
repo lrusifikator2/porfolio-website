@@ -12,7 +12,7 @@
 				opacity: 1;
 				display: block;
 			}
-
+			
 			.body {
 				visibility: hidden;
 			}
@@ -49,7 +49,8 @@
 <div class="main" >
 	<div class="main__inner">
 		<div class="main__row">
-			<div class="main__item main__item_profile">
+			<div class="main__item main__item_profile main__item_r">
+				<div class="main__preitem">
 				<span class="main__cont main__cont_profile">
 					<span class="main__greet">Hi! I'm </span>
 					<span class="main__title main__title_prof">Ruslan Yakushev</span>
@@ -87,25 +88,33 @@
 					</span>
 				</span>
 			</div>
+			</div>
 		</div>
 		<div class="main__row main__row_middle">
 			<div onclick="animate_open_about('/about', '_self', 'main__item_resume')" class="main__item main__item_about">
+				<div class="main__preitem">
 				<span class="main__cont main__cont_b">
 					<span class="main__title">	
 						<span class="main__optnumber">01</span>
 						about
 					</span>
 				</span>
+				</div>
 			</div>
 			<div onclick="animate_open(this,'/resume', '_self')" class="main__item">
+				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">02</span>resume</span>
 				</span>
+				</div>
 			</div>
 			<div onclick="animate_open(this,'/portfolio', '_self')" class="main__item main__item_port">
+				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">03</span>portfolio</span>
 				</span>
+				<div></div>
+				</div>
 			</div>
 		</div>
 		<div class="main__row">
@@ -114,10 +123,13 @@
 					<span class="main__title">Nothing</span>
 				</span>
 			</a>
-			<div onclick="animate_open(this,'/contacts', '_self')" class="main__item main__item_br">
+			<div onclick="animate_open(this,'/contacts', '_self')" class="main__item main__item_br main__item_l">
+				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">04</span>Contacts</span>
 				</span>
+				<div></div>
+				</div>
 			</div>
 		</div>
 	</div>

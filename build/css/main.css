@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-transform: rotate(30deg) scale(1);
         transform: rotate(30deg) scale(1);
         color: black;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     to {
@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-transform: rotate(30deg) scale(1);
         transform: rotate(30deg) scale(1);
         color: black;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     to {
@@ -400,31 +400,31 @@ body {
     }
 
     30% {
-        background: rgba(111, 255, 223, 0.5);
+        background: rgba(111, 255, 223, 0.1);
     }
 
     40% {
-        background: rgba(255, 255, 80, 0.5);
+        background: rgba(255, 255, 80, 0.2);
     }
 
     50% {
-        background: rgba(255, 197, 32, 0.5);
+        background: rgba(255, 197, 32, 0.2);
     }
 
     60% {
-        background: rgba(80, 80, 255, 0.5);
+        background: rgba(80, 80, 255, 0.1);
     }
 
     70% {
-        background: rgba(158, 110, 42, 0.5);
+        background: rgba(158, 110, 42, 0.1);
     }
 
     80% {
-        background: rgba(112, 255, 112, 0.5);
+        background: rgba(112, 255, 112, 0.1);
     }
 
     90% {
-        background: rgba(255, 80, 80, 0.5);
+        background: rgba(255, 80, 80, 0.1);
     }
 
     100% {
@@ -446,31 +446,31 @@ body {
     }
 
     30% {
-        background: rgba(111, 255, 223, 0.5);
+        background: rgba(111, 255, 223, 0.1);
     }
 
     40% {
-        background: rgba(255, 255, 80, 0.5);
+        background: rgba(255, 255, 80, 0.2);
     }
 
     50% {
-        background: rgba(255, 197, 32, 0.5);
+        background: rgba(255, 197, 32, 0.2);
     }
 
     60% {
-        background: rgba(80, 80, 255, 0.5);
+        background: rgba(80, 80, 255, 0.1);
     }
 
     70% {
-        background: rgba(158, 110, 42, 0.5);
+        background: rgba(158, 110, 42, 0.1);
     }
 
     80% {
-        background: rgba(112, 255, 112, 0.5);
+        background: rgba(112, 255, 112, 0.1);
     }
 
     90% {
-        background: rgba(255, 80, 80, 0.5);
+        background: rgba(255, 80, 80, 0.1);
     }
 
     100% {
@@ -517,8 +517,6 @@ body {
 .main__row_middle {
     margin-top: 2.7%;
     height: 130%;
-    margin-left: -1px;
-    margin-right: -1px;
 }
 
 .main__row:last-child {
@@ -534,6 +532,7 @@ body {
     height: 100%;
     content: "";
     color: white;
+    border: 1px solid white;
     font-weight: 700;
     position: relative;
     -webkit-transition: background-color 0.7s, -webkit-transform 1.6s ease-in-out;
@@ -542,7 +541,6 @@ body {
     transition: background-color 0.7s, transform 1.6s ease-in-out, -webkit-transform 1.6s ease-in-out;
     -webkit-transform: scale(0);
     transform: scale(0);
-    border: 1px solid white;
     margin-bottom: -1px;
 }
 
@@ -572,6 +570,7 @@ body {
 
 .main__item_profile {
     cursor: default;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main__greet {
