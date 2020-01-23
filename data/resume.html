@@ -2,84 +2,96 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link rel="stylesheet" href="/build/css/main.css">
+	<link rel="stylesheet" href="resume.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat:100,300,400,500,600,700,800,900|PT+Serif:400,400i,700,700i|Titillium+Web:300,400,600,700,900|Ubuntu:300,300i,400,400i,500,500i,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,500,600,700&display=swap" rel="stylesheet">
-
-	<noscript>
-		<style>
-			.noscript-alert {
-				visibility: visible;
-				opacity: 1;
-				display: block;
-			}
-			
-			.body {
-				visibility: hidden;
-			}
-		</style>
-	</noscript>
-
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="noscript-alert">
-	Your browser doesn't support JavaScript!	
-</div>
 
 <div class="container">
-	<h1 class="name-title">Ruslan Yakushev</h1>
+	<h1 class="name-title">Ruslan Yakushev <span class="name-title__subtitle">Web developer</span> </h1>
 </div>
 
 <div class="resume-page">
-	<div class="resume-page__inner container">
-		<div class="resume-page__item">
-			<div class="resume-page__contact resume-contact">
-				<div class="resume-contact__title">Contacts</div>
-				<div class="resume-contact">
-					<div class="resume-contact__info">yakushev.rusl101@gmail.com</div>
-					<img src="/img/" alt="" class="resume-contact__icon">
-				</div>
-				<div class="resume-contact">
-					<div class="resume-contact__info">+972 53-228-13-07</div>
-					<img src="/img/" alt="" class="resume-contact__icon">
-				</div>
-				<div class="resume-contact">
-					<div class="resume-contact__info">Israel, Qatsrin, Seon 75</div>
-					<img src="/img/" alt="" class="resume-contact__icon">
-				</div>
+	<div class="container">
+		<div class="resume-page__about article">
+			<div class="article__title">About me</div>
+			<div class="article__text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur est aperiam optio eveniet, vitae sunt provident earum, officiis officia nostrum, praesentium libero, fugit rem facere architecto labore. Nesciunt, atque, eius!
 			</div>
-			<div class="resume-page__skills resume-skills">
-				<div class="resume-skills__title">Skills</div>
-				<div class="resume-skills__content">
-					<div class="resume-skills__skill">Skill one *</div>
-					<div class="resume-skills__skill">Skill two *</div>
-					<div class="resume-skills__skill">Skill three *</div>
-					<div class="resume-skills__skill">Skill four *</div>
-				</div>
-			</div>
+		</div>
 
-			<div class="resume-page__skills resume-skills">
-				<div class="resume-skills__title">Skills</div>
-				<div class="resume-skills__content">
-					<div class="resume-skills__skill">Skill one *</div>
-					<div class="resume-skills__skill">Skill two *</div>
-					<div class="resume-skills__skill">Skill three *</div>
-					<div class="resume-skills__skill">Skill four *</div>
+		<div class="resume-page__contacts article">
+			
+			<div class="article__title">Contacts</div>
+			<div class="article__inner">
+				<div class="article__contact">
+					<div class="article__icon">
+						<img src="img/resume/mail.png" alt="">
+					</div>
+					<div class="article__info">yakushev.rusl101@gmail.com</div>
+					
+				</div>
+				<div class="article__contact">
+					<div class="article__icon">
+						<img src="img/resume/phone.png" alt="">
+					</div>
+					<div class="article__info">+972 53-228-13-07</div>
+					
+				</div>
+				<div class="article__contact">
+					<div class="article__icon arictle__icon_hlittle">
+						<img src="img/resume/pointer.png" alt="">
+					</div>
+					<div class="article__info">Israel, Qatsrin, Seon 75</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="resume-page__skills article">
+			<div class="article__title">Skills</div>
+			<div class="article__inner">
+				<div class="article__item">
+					<div class="article__colortitle">Hard skills</div>
+				</div>
+				<div class="article__item">
+					<div class="article__colortitle">Soft skills</div>
+				</div>
+			</div>
+			<div class="article__inner article__inner_mt">
+				<div class="article__item article__item_border">
+					<div class="article__opt">skill one</div>
+					<div class="article__opt">skill two</div>
+					<div class="article__opt">skill three</div>
+					<div class="article__opt">skill four</div>
+				</div>
+				<div class="article__item">
+					<div class="article__opt">skill one</div>
+					<div class="article__opt">skill two</div>
+					<div class="article__opt">skill three</div>
+					<div class="article__opt">skill four</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="resume-page__item">
-			<div class="resume-page__content">
-				<div class="resume-page__title">Title</div>
-				<div class="resume-page__text">Text</div>
+		<div class="resume-page__education article">
+			<div class="article__title">Education</div>
+				<div class="article__opt strong">subt</div>
+				<div class="article__opt">skill one</div>
+		</div>
+
+		<div class="resume-page__experience article">
+			<div class="article__title">Experience</div>
+			<div class="article__inner">
+				<div class="article__opt article__opt_l strong">subt</div>
+				<div class="article__opt article__opt_c">skill one</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<script src="/build/js/main.js"></script>
 </body>
 </html>
