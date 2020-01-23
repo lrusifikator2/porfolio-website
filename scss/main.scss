@@ -12,7 +12,10 @@ body {
 }
 
 .container {
-	padding: 20px;
+	max-width: 1440px;
+	margin: 0 auto;
+	display: block;
+	padding: 0 30px;
 }
 
 .main-bg {
@@ -24,6 +27,16 @@ body {
 	left: 0;
 	z-index: 0;
 	animation: colorchange 120s infinite;
+	
+	&__blur {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		background-color: rgba(black, 0.8);
+		width: 100%;
+		height: 100%;
+	}
 
 	&__inner {
 		display: flex;
@@ -86,7 +99,6 @@ $main_border_color: white;
 	z-index: 1;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(black, 0.8);
 
 	&__inner {
 		position: absolute;
@@ -337,7 +349,6 @@ $main_border_color: white;
 	}
 }
 
-
 .animation_whitefade_s {
 	transition: background-color 1s ease;
 	background-color: #fff;
@@ -346,6 +357,225 @@ $main_border_color: white;
 		transition: color .6s ease;
 		color: transparent;
 	}
+}
+
+.cont-container {
+	max-width: 1920px;
+	padding: 0 30px;
+	display: block;
+	margin: 0 auto;
+}
+
+.little-container {
+	
+	max-width: 1200px;
+	padding: 0 50px;
+	display: block;
+	
+	margin: 0 auto;
+}
+
+.resume {
+	width: 100%;
+	height: 91vh;
+	position: absolute;
+	top: 9vh;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: 100%;
+		width: 100%;
+		border-radius: 5px;
+	}
+	
+	&__triangle {
+		z-index: 4;
+		right: -34px;
+		top: -9px;
+		position: absolute;
+	}
+
+	&__triangle {
+		content: "";
+		display: block;
+	
+		border-right: 50px solid transparent;
+		border-left: 50px solid transparent;
+		border-top: 50px solid #aaa;
+		
+		transform: rotate(-135deg);
+	}
+
+	&__item {
+		background-color: #fff;
+		width: 33.34%;
+		
+		padding: 200px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+
+		transition: background .2s;
+		border-radius: 3px;
+		transform: scale(0);
+	
+		transition: transform .6s;
+		position: relative;
+
+		&_html {
+			background-color: #222;
+			&:hover {
+				background-color: #202020;
+			}
+			.resume__txt{
+				font-size: 30px;
+				font-weight: 600;
+				margin-bottom: -10px;
+				//margin-left: 0px;
+			}
+		}
+		
+		&_pdf {
+			.resume__txt{
+				//margin-left: 25px;	
+				//margin-right: 10px;
+			}
+			
+			margin: 0 5px;
+			background-color: #d01e26;
+			
+			&:hover {
+				background-color: #c9191e;
+			}
+		}
+
+		&_exel {
+			background-color: #00973a;
+			&:hover {
+				background-color: #009030;
+			}
+		}
+	}
+
+	&__cont {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		&_html {
+			padding: 10px;
+		}
+	}
+	
+	&__icon {
+		width: 100px;
+		height: 97px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__txt {
+		color: white;
+		font-size: 40px;
+		letter-spacing: 0.1px;
+		font-weight: 500;
+	}
+}
+
+.menu {
+	z-index: 200;
+	position: absolute;
+	top: -150px;
+	left: 0;
+	
+	width: 100%;
+	border-bottom: 1px solid white;
+	
+	transition: top .6s;
+	height: 9vh;
+
+	&__inner {
+		display: flex;
+		height: 100%;
+	}
+
+	&__item {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: white;
+		padding: 0 40px;
+		font-size: 20px;
+		cursor: pointer;
+		transition: background-color .4s, color .4s;
+		font-weight: 600;
+		border-left: 1px solid #fff;
+		background-color: transparent;
+
+		&:last-child {
+			border-right: 1px solid #fff;
+		}
+		&:hover {
+			background-color: rgba(white, 0.4);
+			//color: #444;
+		}
+	}
+}
+
+.name-title {
+	font-size: 65px;
+	font-family: 'Comfortaa', cursive;
+	text-align: center;
+	padding: 20px;
+
+	position: relative;
+	&:after {
+		position: absolute;
+		display: block;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: #444;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+
+.resume-page {
+	&__inner {}
+	&__item {}
+	&__contact {}
+	&__skills {}
+	&__content {}
+	&__title {}
+	&__text {}
+}
+
+.resume-contact {
+	&__title {}
+	&__info {}
+	&__icon {}
+}
+
+.resume-skills {
+	&__title {}
+	&__content {}
+	&__skill {}
 }
 
 @import "resp.scss";

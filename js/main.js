@@ -29,9 +29,11 @@ var main_inner = $(".main__inner");
 main_inner.css("left",  "-" + main_inner.width() + "px");
 main_inner.css("top", "-" + main_inner.height() + "px");
 
+
 $(".main__inner").animate( {"left": "-" + main_inner.width() / 7, "top" : "-" + main_inner.height() / 4.9}, 1000);
 $(".main__item").toggleClass('main__item_scale');
-
+$(".resume__item").css("transform", "scale(1)");
+$(".menu").css("top", "0");
 
 setTimeout(function() {
 	$(".main__item_r").css("transform", "translateX(1px) scale(1)");
