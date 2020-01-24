@@ -32,7 +32,6 @@ main_inner.css("top", "-" + main_inner.height() + "px");
 
 $(".main__inner").animate( {"left": "-" + main_inner.width() / 7, "top" : "-" + main_inner.height() / 4.9}, 1000);
 $(".main__item").toggleClass('main__item_scale');
-$(".resume__item").css("transform", "scale(1)");
 $(".menu").css("top", "0");
 
 setTimeout(function() {

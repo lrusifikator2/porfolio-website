@@ -20,7 +20,7 @@
 	}
 
 	to {
-		transform: rotate(0deg);
+		transform: translateY(20%) rotate(0deg);
 	}
 }
 
@@ -30,35 +30,31 @@
 	}
 
 	to {
-		transform: translateY(100%) rotate(30deg);
-		color: black;
+		transform: translateY(50%) rotate(30deg);
+	
 	}
 }
 
 
 @keyframes pulse_about {
 	from {
-		color: black;
-		transform: translateY(100%) rotate(30deg) scale(0.98);
+		transform: translateY(50%) rotate(30deg) scale(0.98);
 	}
 
 	to {
-		color: black;
-		transform: translateY(100%) rotate(30deg) scale(1);
+		transform: translateY(50%) rotate(30deg) scale(1);
 	}
 
 }
 
 @keyframes expand_about {
 	from {
-		transform: translateY(100%) rotate(30deg) scale(1);
-		color: black;
+		transform: translateY(50%) rotate(30deg) scale(1);
 		border: 1px solid rgba(#fff, 0.5);
 	}
 
 	to {
 		transform: translateY(100%) rotate(30deg) scale(1.5);
-		color: white;
 		background-color: transparent;
 		border: 1px solid rgba(#fff, 0);
 	}
@@ -69,18 +65,15 @@
 
 	to {
 		transform: rotate(30deg);
-		color: black;
 	}
 }
 
 @keyframes pulse {
 	from {
-		color: black;
 		transform: rotate(30deg) scale(0.98);
 	}
 
 	to {
-		color: black;
 		transform: rotate(30deg) scale(1);
 	}
 
@@ -89,15 +82,35 @@
 @keyframes expand {
 	from {
 		transform: rotate(30deg) scale(1);
-		color: black;
 		border: 1px solid rgba(#fff, 0.4);
 	}
 
 	to {
 		transform: rotate(30deg) scale(1.5);
-		color: white;
+
 		background-color: transparent;
 		border: 1px solid rgba(#fff, 0);
 	}
 }
 
+
+
+.animation_whitefade {
+	transition: background-color 1s 0.8s ease;
+	background-color: #fff;
+
+	.main__messageme {
+		transition: color .6s 0.7s ease;
+		color: transparent;
+	}
+}
+
+.animation_whitefade_s {
+	transition: background-color 1s ease;
+	background-color: #fff;
+
+	.main__messageme {
+		transition: color .6s ease;
+		color: transparent;
+	}
+}

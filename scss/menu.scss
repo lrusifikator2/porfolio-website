@@ -1,0 +1,40 @@
+.menu {
+	z-index: 200;
+	position: absolute;
+	top: -150px;
+	left: 0;
+	
+	width: 100%;
+	border-bottom: 1px solid white;
+	
+	transition: top .6s;
+	height: 9vh;
+
+	&__inner {
+		display: flex;
+		height: 100%;
+	}
+
+	&__item {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: white;
+		padding: 0 40px;
+		font-size: 20px;
+		cursor: pointer;
+		transition: background-color .4s, color .4s;
+		font-weight: 600;
+		border-left: 1px solid #fff;
+		background-color: transparent;
+
+		&:last-child {
+			border-right: 1px solid #fff;
+		}
+		&:hover {
+			background-color: rgba(white, 0.4);
+		}
+	}
+}
