@@ -44,7 +44,7 @@ $dark_hover: #333;
 	&__item {
 		z-index: 5;
 		display: block;
-		cursor: pointer;
+		cursor: default;
 		width: 100%;
 		height: 100%;
 		
@@ -60,9 +60,6 @@ $dark_hover: #333;
 		
 		margin-bottom: -1px;
 		
-		&:hover {
-			background-color: rgba(#cfcfcf, 0.4);
-		}
 		
 		&_scale {
   			transform: scale(1);
@@ -84,6 +81,14 @@ $dark_hover: #333;
 		&_profile {
 			cursor: default;
 			background-color: rgba(#fff, 0.2);
+		}
+	}
+
+	&__yhover {
+		cursor: pointer;
+		&:hover {
+			background-color: rgba(#cfcfcf, 0.4);
+
 		}
 	}
 	

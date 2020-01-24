@@ -25,7 +25,8 @@ const jsinclude = require('gulp-include')
 //const htmlconcat = require('');
 
 /* ----------------------------------files to compile---------------------------------------------*/
-let html_files = ["index.html", "pages/resume.html"];
+//let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/portfolio.html", "pages/about.html"];
+let html_files = ["index.html", "pages/resume.html", "pages/contacts.html"];
 let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss"];
 /* -----------------------------------------------------------------------------------------------*/
 
