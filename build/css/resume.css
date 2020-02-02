@@ -17,26 +17,27 @@ body {
 }
 
 .resume .container {
-    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.9);
     overflow: auto;
     z-index: 5;
 }
 
 .name-title {
     font-size: 65px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
     padding: 30px 20px;
     position: relative;
     z-index: 1;
     border: 2px solid #c0c0c0;
     margin: 30px 30px 9vh 30px;
+    letter-spacing: 2px;
 }
 
 .name-title__subtitle {
     font-size: 20px;
     padding: 5px 20px;
-    background-color: lightblue;
+    background-color: #afdfff;
     border: 2px solid #a0a0bb;
     position: absolute;
     z-index: 2;
@@ -44,10 +45,11 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%);
+    font-weight: 300;
 }
 
 .resume-page {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .article {
@@ -56,7 +58,7 @@ body {
 }
 
 .article__title {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 300;
     display: inline-block;
     position: relative;
@@ -70,7 +72,7 @@ body {
     content: "";
     width: 120%;
     height: 2px;
-    background-color: lightblue;
+    background-color: #afdfff;
     left: 50%;
     bottom: -3px;
     -webkit-transform: translateX(-50%);
@@ -78,10 +80,11 @@ body {
 }
 
 .article__text {
-    font-weight: 400;
-    line-height: 22px;
-    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+    font-size: 18px;
     margin: 0 70px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .article__contact {
@@ -102,20 +105,31 @@ body {
     margin-right: 10px;
 }
 
+.article__icon_mdl img {
+    width: 23px;
+}
+
 .arictle__icon_hlittle img {
     height: 25px;
 }
 
 .article__info {
-    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
 }
 
 .article__colortitle {
     padding: 5px 10px;
     display: inline-block;
-    background-color: lightblue;
-    font-size: 17px;
-    font-weight: 300;
+    background-color: #afdfff;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article__colortitle_mt {
+    margin-top: 60px;
+    background-color: #bfbfbf;
 }
 
 .article__inner {
@@ -139,9 +153,12 @@ body {
 }
 
 .article__opt {
+    font-family: 'Montserrat', sans-serif;
     display: block;
     padding: 5px;
     font-weight: 400;
+    font-size: 16px;
+    margin: 5px;
 }
 
 .strong {
@@ -150,9 +167,13 @@ body {
 
 .article__opt_l {
     width: 20%;
-    background-color: #f0f0f0;
     padding: 20px 5px;
-    border-right: 1px solid #c0c0c0;
+    margin-left: 70px;
+}
+
+.article__opt_r {
+    margin-left: 20px;
+    border-left: 1px solid #c0c0c0;
 }
 
 .article__opt_c {

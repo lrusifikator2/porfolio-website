@@ -26,7 +26,7 @@ const jsinclude = require('gulp-include')
 
 /* ----------------------------------files to compile---------------------------------------------*/
 //let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/portfolio.html", "pages/about.html"];
-let html_files = ["index.html", "pages/resume.html", "pages/contacts.html"];
+let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/rsm.html"];
 let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss"];
 /* -----------------------------------------------------------------------------------------------*/
 
@@ -36,7 +36,7 @@ var gulpSSH = new ssh({
   sshConfig: sshConfig
 });
 
-function compile_css(m, fl){
+function css(m, fl){
   let add_func;
   if(m == true){
     add_func = minifyCSS;
@@ -44,7 +44,7 @@ function compile_css(m, fl){
     add_func = cssbeautify;
   } 
   
-  return src("./" + proj_name + "/scss/"  + fl)
+  return src("./" + proj_name + "/scss/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -56,7 +56,8 @@ function compile_css(m, fl){
     .pipe(gulpSSH.dest('/var/www/html/build/css'))
 }
 
-function css(m=false) {
+function sscss(m=false) {
+  console.log("Yes");
   for (let i = 0; i < css_files.length; i++){
     compile_css(m, css_files[i]);
   }
@@ -91,7 +92,7 @@ function compile_html(path){
   }
 
   return src("./" + proj_name + "/" + path)
-    .pipe(gulpSSH.dest('/var/www/html/' + folder))
+   .pipe(gulpSSH.dest('/var/www/html/' + folder))
 }
 
 function html() {
@@ -106,7 +107,8 @@ function img(){
 }
 
 function resume(){
-  ;
+  return src("./" + proj_name + "/data/**/*")
+    .pipe(gulpSSH.dest('/var/www/html/data/'));
 }
 
 function watch() {
@@ -117,8 +119,10 @@ function watch() {
     } 
   });
 
+  gwatch("./" + proj_name + "/data/**/*", resume);
+  gwatch('./' + proj_name + '/scss/**/*', css);
   gwatch('./' + proj_name + '/img/**/*', img);
-  gwatch('./' + proj_name + '/scss/**/*.scss', css);
+  
   gwatch('./' + proj_name + '/js/**/*.js', js);
   gwatch('./' + proj_name + '/*.html').on('change', browSync.reload).on('change', html);
   gwatch('./' + proj_name + '/pages/**/*.html').on('change', browSync.reload).on('change', html);
@@ -146,13 +150,14 @@ task(proj_name + "_m", function() {
   return new Promise(function(resolve, reject) {
     css();
     js();
-    console.log("js and css minified");
+    console.log("js and css minif ied");
     resolve();
   });
 });
 
 task(proj_name, function() { 
   return new Promise(function(resolve, reject) {
+    resume();
     css();
     js();
     html();
