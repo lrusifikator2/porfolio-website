@@ -40,8 +40,6 @@ $dark_hover: #333;
 			
 		}
 	}
-
-
 		
 	&__item {
 		z-index: 5;
@@ -58,8 +56,6 @@ $dark_hover: #333;
 		position: relative;
 		transition: background-color 0.7s, transform .7s ease-in-out;
 		transform: scale(0);
-
-		
 		margin-bottom: -1px;
 		
 		
@@ -71,13 +67,13 @@ $dark_hover: #333;
 			cursor: default;
 			background-color: transparent;
 			visibility: hidden;
+			opacity: 0;			
 			&:hover {
 				background-color: transparent;
 			}
 		}
 		&_port {
 			height: 115%;
-			cursor: pointer;
 		}
 
 		&_profile {
@@ -90,6 +86,13 @@ $dark_hover: #333;
 	}
 	&__yhover {
 		//cursor: pointer;
+		&:hover {
+			background-color: rgba(#cfcfcf, 0.4);
+		}
+	}
+
+	&__ycurhov {
+		cursor: pointer;
 		&:hover {
 			background-color: rgba(#cfcfcf, 0.4);
 		}

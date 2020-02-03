@@ -72,6 +72,7 @@
     cursor: default;
     background-color: transparent;
     visibility: hidden;
+    opacity: 0;
 }
 
 .main__item_nohover:hover {
@@ -80,7 +81,6 @@
 
 .main__item_port {
     height: 115%;
-    cursor: pointer;
 }
 
 .main__item_profile {
@@ -93,6 +93,14 @@
 }
 
 .main__yhover:hover {
+    background-color: rgba(207, 207, 207, 0.4);
+}
+
+.main__ycurhov {
+    cursor: pointer;
+}
+
+.main__ycurhov:hover {
     background-color: rgba(207, 207, 207, 0.4);
 }
 

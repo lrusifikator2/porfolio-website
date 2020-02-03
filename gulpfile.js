@@ -26,8 +26,8 @@ const jsinclude = require('gulp-include')
 
 /* ----------------------------------files to compile---------------------------------------------*/
 //let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/portfolio.html", "pages/about.html"];
-let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/rsm.html"];
-let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss"];
+let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/rsm.html", "pages/portfolio.html" ];
+let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss", "portfolio.scss"];
 /* -----------------------------------------------------------------------------------------------*/
 
 const sshConfig = require('./../gulpfile.js').sshConfig;
