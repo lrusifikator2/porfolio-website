@@ -1,0 +1,101 @@
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #333;
+}
+
+.portfolio {
+
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	&__image {
+		background: url('/img/bg6.jpg') no-repeat center center / cover;
+	}
+
+	&__blur {
+		background-color: rgba(black, 0.7);
+		padding: 50px 40px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding-top: 150px;
+	}
+	&__row {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	&__item {
+		background-color: #fff;
+		margin: 0 auto;
+		width: 50%;
+		max-width: 500px;
+		padding: 20px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 15px;
+		opacity: .8;
+	}
+	&__img {	
+		transition: transform .3s;
+		display: block;
+		&:hover {
+			transform: scale(1.05);
+		}	
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__title {
+		padding-top: 20px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	&__techstack {
+		padding-top: 20px;
+	}
+	&__techs {}
+	&__desc {
+		padding-top: 20px;
+		display: block;
+		height: 50px;
+	}
+	&__links {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__link {
+		display: block;
+		width: 40%;
+		text-align: center;
+		margin: 0 auto;
+		border: 1px solid #333;
+		padding: 20px;
+
+		border-radius: 2px;
+		transition: background-color .4s;
+		background-color: rgba(#333, .4);
+		&_demo {	
+			&:hover {
+				background-color: #aaaafa;
+			}
+		}
+		&_code {
+
+			&:hover {
+				background-color: #faaaaa;
+			}	
+		}
+
+		
+	}
+}
