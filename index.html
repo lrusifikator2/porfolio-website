@@ -42,33 +42,32 @@
 					<span class="main__greet">Hi! I'm </span>
 					<span class="main__title main__title_prof">Ruslan Yakushev</span>
 					<span class="main__title">web developer</span>
-					<span onclick="animate_link('/contactme', '_self')" class="main__messageme">Contact me</span>
+					<span onclick="animate_link('.main', '/contactme', '_self')" class="main__messageme">Contact me</span>
 					<span class="main__soc social">
-						<span title="My first github" onclick="animate_link('https://github.com/lrusifikator', '_self')" class="social__link">
+						<span title="My first github" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/1.png" alt="" class="social__icon">
 								<span class="social__add">1</span>
 							</span>
 						</span>
 
-						<span title="My second github" onclick="animate_link('https://github.com/lrusifikator2', '_self')" class="social__link">
+						<span title="My second github" onclick="animate_link('.main', 'https://github.com/lrusifikator2', '_blank')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/1.png" alt="" class="social__icon">
-								<span class="social__add">2</span>
 							</span>
 						</span>
-						<span title="My facebook" onclick="animate_link('https://facebook.com', '_self')" class="social__link">
+						<span title="My facebook" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/2.png" alt="" class="social__icon">
 							</span>
 						</span>
 						
-						<span title="My gmail" onclick="animate_link('mailto:yakushev.rusl101@gmail.com', '_self')" class="social__link">
+						<span title="My gmail" onclick="animate_link('.main', 'mailto:yakushev.rusl101@gmail.com', '_blank')" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/3.png" alt="" class="social__icon">
 							</span>
 						</span>
-						<span title="My phone number" onclick="animate_link('tel:+972532281307', '_self')" class="social__link">
+						<span title="My phone number" class="social__link">
 							<span class="social__inner">
 								<img src="img/social/4.png" alt="" class="social__icon">
 							</span>
@@ -79,24 +78,16 @@
 			</div>
 		</div>
 		<div class="main__row main__row_middle">
-			<div onclick="animate_open_about('/about', '_self', 'main__item_resume')" class="main__item main__item_about main__item_nohover">
-				<div class="main__preitem">
-				<span class="main__cont main__cont_b">
-					<span class="main__title">	
-						<span class="main__optnumber">01</span>
-						about
-					</span>
-				</span>
-				</div>
+			<div class="main__item main__item_nohover">
 			</div>
-			<div onclick="animate_open(this,'/pages/resume.html', '_self')" class="main__item main__ycurhov">
+			<div onclick="animate_menu_item(this,'/pages/resume.html')" class="main__item main__ycurhov">
 				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">01</span>resume</span>
 				</span>
 				</div>
 			</div>
-			<div onclick="animate_open(this,'/pages/portfolio.html', '_self')" class="main__item main__item_port main__ycurhov">
+			<div onclick="animate_menu_item(this, '/pages/portfolio.html')" class="main__item main__item_port main__ycurhov">
 				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">02</span>portfolio</span>
@@ -106,12 +97,9 @@
 			</div>
 		</div>
 		<div class="main__row">
-			<a class="main__item main__item_nohover main__item_br">
-				<span class="main__cont">
-					<span class="main__title">Nothing</span>
-				</span>
-			</a>
-			<div onclick="animate_open(this,'/pages/contacts.html', '_self')" class="main__item main__item_br main__item_l main__ycurhov">
+			<div class="main__item main__item_nohover">
+			</div>
+			<div onclick="animate_menu_item(this, '/pages/contacts.html')" class="main__item main__item_br main__item_l main__ycurhov">
 				<div class="main__preitem">
 				<span class="main__cont">
 					<span class="main__title"><span class="main__optnumber">03</span>Contacts</span>

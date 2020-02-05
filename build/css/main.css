@@ -97,186 +97,25 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.animation_1 {
+.animation_item {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-animation: rotate 0.6s, pulse 0.4s 0.6s cubic-bezier(0, 0.98, 1, 0.89), expand 1s 0.8s ease forwards;
-    animation: rotate 0.6s, pulse 0.4s 0.6s cubic-bezier(0, 0.98, 1, 0.89), expand 1s 0.8s ease forwards;
-}
-
-.animation_about {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-animation: rotate_about 0.6s ease, pulse_about 0.4s 0.6s cubic-bezier(0, 0.98, 1, 0.89), expand_about 1s 0.8s ease forwards;
-    animation: rotate_about 0.6s ease, pulse_about 0.4s 0.6s cubic-bezier(0, 0.98, 1, 0.89), expand_about 1s 0.8s ease forwards;
-}
-
-.animation_cont {
-    -webkit-animation: rotate_cont .9s ease forwards;
-    animation: rotate_cont .9s ease forwards;
-}
-
-@-webkit-keyframes rotate_cont {
-    from {
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-    }
-
-    to {
-        -webkit-transform: translateY(20%) rotate(0deg);
-        transform: translateY(20%) rotate(0deg);
-    }
-}
-
-@keyframes rotate_cont {
-    from {
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-    }
-
-    to {
-        -webkit-transform: translateY(20%) rotate(0deg);
-        transform: translateY(20%) rotate(0deg);
-    }
-}
-
-@-webkit-keyframes rotate_about {
-    from {
-        -webkit-transform: translateY(0) rotate(0);
-        transform: translateY(0) rotate(0);
-    }
-
-    to {
-        -webkit-transform: translateY(50%) rotate(30deg);
-        transform: translateY(50%) rotate(30deg);
-    }
-}
-
-@keyframes rotate_about {
-    from {
-        -webkit-transform: translateY(0) rotate(0);
-        transform: translateY(0) rotate(0);
-    }
-
-    to {
-        -webkit-transform: translateY(50%) rotate(30deg);
-        transform: translateY(50%) rotate(30deg);
-    }
-}
-
-@-webkit-keyframes pulse_about {
-    from {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(0.98);
-        transform: translateY(50%) rotate(30deg) scale(0.98);
-    }
-
-    to {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(1);
-        transform: translateY(50%) rotate(30deg) scale(1);
-    }
-}
-
-@keyframes pulse_about {
-    from {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(0.98);
-        transform: translateY(50%) rotate(30deg) scale(0.98);
-    }
-
-    to {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(1);
-        transform: translateY(50%) rotate(30deg) scale(1);
-    }
-}
-
-@-webkit-keyframes expand_about {
-    from {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(1);
-        transform: translateY(50%) rotate(30deg) scale(1);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    to {
-        -webkit-transform: translateY(100%) rotate(30deg) scale(1.5);
-        transform: translateY(100%) rotate(30deg) scale(1.5);
-        background-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0);
-    }
-}
-
-@keyframes expand_about {
-    from {
-        -webkit-transform: translateY(50%) rotate(30deg) scale(1);
-        transform: translateY(50%) rotate(30deg) scale(1);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    to {
-        -webkit-transform: translateY(100%) rotate(30deg) scale(1.5);
-        transform: translateY(100%) rotate(30deg) scale(1.5);
-        background-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0);
-    }
-}
-
-@-webkit-keyframes rotate {
-    from {
-    }
-
-    to {
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-    }
-}
-
-@keyframes rotate {
-    from {
-    }
-
-    to {
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-    }
-}
-
-@-webkit-keyframes pulse {
-    from {
-        -webkit-transform: rotate(30deg) scale(0.98);
-        transform: rotate(30deg) scale(0.98);
-    }
-
-    to {
-        -webkit-transform: rotate(30deg) scale(1);
-        transform: rotate(30deg) scale(1);
-    }
-}
-
-@keyframes pulse {
-    from {
-        -webkit-transform: rotate(30deg) scale(0.98);
-        transform: rotate(30deg) scale(0.98);
-    }
-
-    to {
-        -webkit-transform: rotate(30deg) scale(1);
-        transform: rotate(30deg) scale(1);
-    }
+    -webkit-animation: expand .6s ease forwards;
+    animation: expand .6s ease forwards;
 }
 
 @-webkit-keyframes expand {
     from {
-        -webkit-transform: rotate(30deg) scale(1);
-        transform: rotate(30deg) scale(1);
+        -webkit-transform: rotate(0) scale(1);
+        transform: rotate(0) scale(1);
         border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     to {
-        -webkit-transform: rotate(30deg) scale(1.5);
-        transform: rotate(30deg) scale(1.5);
+        -webkit-transform: rotate(0) scale(1.5);
+        transform: rotate(0) scale(1.5);
         background-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0);
     }
@@ -284,41 +123,27 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes expand {
     from {
-        -webkit-transform: rotate(30deg) scale(1);
-        transform: rotate(30deg) scale(1);
+        -webkit-transform: rotate(0) scale(1);
+        transform: rotate(0) scale(1);
         border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     to {
-        -webkit-transform: rotate(30deg) scale(1.5);
-        transform: rotate(30deg) scale(1.5);
+        -webkit-transform: rotate(0) scale(1.5);
+        transform: rotate(0) scale(1.5);
         background-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0);
     }
 }
 
 .animation_whitefade {
-    -webkit-transition: background-color 1s 0.8s ease;
-    transition: background-color 1s 0.8s ease;
+    -webkit-transition: background-color .6s ease;
+    transition: background-color .6s ease;
     background-color: #fff;
-}
-
-.animation_whitefade .main__messageme {
-    -webkit-transition: color .6s 0.7s ease;
-    transition: color .6s 0.7s ease;
-    color: transparent;
-}
-
-.animation_whitefade_s {
-    -webkit-transition: background-color 1s ease;
-    transition: background-color 1s ease;
-    background-color: #fff;
-}
-
-.animation_whitefade_s .main__messageme {
-    -webkit-transition: color .6s ease;
-    transition: color .6s ease;
-    color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
