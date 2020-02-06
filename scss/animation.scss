@@ -3,7 +3,6 @@
 	animation: expand .6s ease forwards;
 }
 
-
 @keyframes expand {
 	from {
 		transform: rotate(0) scale(1);
@@ -22,5 +21,4 @@
 	transition: background-color .6s ease;
 	background-color: #fff;
 	user-select: none;
-
 }
