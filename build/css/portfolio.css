@@ -82,10 +82,17 @@ body {
     padding-top: 20px;
 }
 
+.portfolio__techs {
+    font-weight: 500;
+}
+
 .portfolio__desc {
     padding-top: 20px;
     display: block;
-    height: 50px;
+    height: 100px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 15px;
 }
 
 .portfolio__links {

@@ -63,11 +63,16 @@ body {
 	&__techstack {
 		padding-top: 20px;
 	}
-	&__techs {}
+	&__techs {
+		font-weight: 500;
+	}
 	&__desc {
 		padding-top: 20px;
 		display: block;
-		height: 50px;
+		height: 100px;
+		margin-bottom: 20px;
+		line-height: 20px;
+		font-size: 15px;
 	}
 	&__links {
 		display: flex;

@@ -89,6 +89,7 @@ function set_animate_link(){
 	}
 }
 
+
 (function() {
 	let menu = document.querySelector(".menu");
 	
