@@ -1,0 +1,52 @@
+body {
+  background: url("/img/test.jpg") no-repeat center center/cover; }
+
+input {
+  display: block; }
+
+textarea {
+  display: block; }
+
+.contacts {
+  display: block;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .contacts__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+
+.contactme {
+  /* .contactme__inp */
+  /* .contactme__btn */ }
+  .contactme__inp {
+    font-size: 18px;
+    border: none;
+    outline: none !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px; }
+  .contactme__inps {
+    display: flex;
+    justify-content: space-between; }
+    .contactme__inps input:first-child {
+      margin-right: 10px; }
+  .contactme__inp_text {
+    width: 100%;
+    display: block;
+    resize: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 250px; }
+  .contactme__btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    float: right;
+    transition: background .4s, color .4s; }
+    .contactme__btn:hover {
+      background-color: #555;
+      color: white; }
+
+/*# sourceMappingURL=../maps/contactme.css.map */

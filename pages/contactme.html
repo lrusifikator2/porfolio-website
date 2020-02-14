@@ -5,7 +5,7 @@
 	<base href="/">
 	<link rel="stylesheet" href="build/css/main.css">
 	<link rel="stylesheet" href="build/css/menu.css">
-	<link rel="stylesheet" href="build/css/contacts.css">
+	<link rel="stylesheet" href="build/css/contactme.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900&display=swap" rel="stylesheet">
@@ -40,18 +40,17 @@
 </div>
 
 <div class="contacts">
-	<div class="contacts__inner container">
-		<div class="contacts__item">
-			<div class="contacts__title">Send me a message</div>
-			<a href="mailto:yakushev.rusl1101@gmail.com"  target="_blank" class="contacts__subtitle">yakushev.rusl101@gmail.com</a> 
-		</div>
-		<div class="contacts__item">
-			<div class="contacts__title">Call me</div>
-			<a href="tel:+972532281307" class="contacts__subtitle">+972 53 228 1307</a> 
-		</div>
-		<div class="contacts__item">
-			<div class="contacts__title">Check out my github</div>
-			<a href="https://github.com/lrusik" target="_blank" class="contacts__subtitle">https://github.com/lrusik</a> 
+	<div class="contacts__inner">
+		<div class="container">
+			<form action="" class="contactme">
+				<div class="contactme__inps">
+					<input class="contactme__inp" type="text" placeholder="Your name">
+					<input class="contactme__inp" type="text" placeholder="Your email">
+				</div>
+				<textarea class="contactme__inp contactme__inp_text" name="" id="" placeholder="Your message"></textarea>
+				
+				<button class="contactme__btn" type="submit">Send message</button>
+			</form>
 		</div>
 	</div>
 </div>

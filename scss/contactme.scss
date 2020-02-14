@@ -1,0 +1,66 @@
+ body {
+	background: url('/img/test.jpg') no-repeat center center / cover;
+}
+
+input  {
+	display: block;
+}
+
+textarea {
+	display: block;
+}
+
+.contacts {
+	display: block;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	background-color: rgba(#000, 0.5);
+	&__inner {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}	
+}
+
+.contactme {
+	/* .contactme__inp */
+	&__inp {
+		font-size: 18px;
+		border: none;
+		outline: none !important;
+		background-color: rgba(#fff, 0.9);
+		padding: 15px;
+	}
+
+	&__inps {
+		display: flex;
+		justify-content: space-between;
+		input:first-child {
+			margin-right: 10px;
+		}
+	}
+	&__inp_text {
+		width: 100%;
+		display: block;
+		resize: none;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		height: 250px;
+	}
+
+	/* .contactme__btn */
+	&__btn {
+		padding: 10px 15px;
+		font-size: 16px;
+		float: right;
+		transition: background .4s, color .4s;
+		&:hover {
+			background-color: #555;
+			color: white;
+		}
+
+	}
+}

@@ -11,23 +11,17 @@ const ssh = require('gulp-ssh')
 
 /* css */
 const sass = require('gulp-sass');
-const minifyCSS = require('gulp-cssnano');
 const cssbeautify = require('gulp-cssbeautify');
 const autoprefixer = require('gulp-autoprefixer');
 const sassGlob = require('gulp-sass-glob');
 
 /* js */
-const jsuglify = require('gulp-uglify');
-const jsbeautify = require('gulp-beautify');
 const jsinclude = require('gulp-include')
-
-/* html */
-//const htmlconcat = require('');
 
 /* ----------------------------------files to compile---------------------------------------------*/
 //let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/portfolio.html", "pages/about.html"];
-let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/rsm.html", "pages/portfolio.html" ];
-let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss", "portfolio.scss"];
+let html_files = ["index.html", "pages/resume.html", "pages/contacts.html", "pages/rsm.html", "pages/portfolio.html", "pages/contactme.html" ];
+let css_files = ["main.scss", "resume.scss", "contacts.scss", "main-bg.scss", "index.scss", "menu.scss", "portfolio.scss", "contactme.scss"];
 /* -----------------------------------------------------------------------------------------------*/
 
 const sshConfig = require('./../gulpfile.js').sshConfig;
@@ -37,19 +31,12 @@ var gulpSSH = new ssh({
 });
 
 function css(m, fl){
-  let add_func;
-  if(m == true){
-    add_func = minifyCSS;
-  } else {
-    add_func = cssbeautify;
-  } 
   
   return src("./" + proj_name + "/scss/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(add_func())
     .pipe(sourcemaps.write('../maps'))
     .pipe(dest("./" + proj_name + "/build/css"))
     .pipe(browSync.stream())
@@ -64,16 +51,10 @@ function sscss(m=false) {
 }
 
 function js(m=false) {
-  if(m == true){
-    add_func = jsuglify;
-  } else {
-    add_func = jsbeautify;
-  }
 
   return src("./" + proj_name + "/js/main.js", { sourcemaps: true })
     .pipe(sourcemaps.init())
     .pipe(jsinclude()).on('error', console.log)
-    .pipe(add_func())
     .pipe(sourcemaps.write('../maps'))
     .pipe(dest('./' + proj_name + '/build/js', { sourcemaps: true }))
     .pipe(browSync.stream())

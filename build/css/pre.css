@@ -1,100 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
+  margin: 0;
+  padding: 0;
+  border: 0; }
 
 *, *:before, *:after {
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 :focus, :active {
-    outline: none !important;
-}
+  outline: none !important; }
 
 a:focus, a:active {
-    outline: none !important;
-}
+  outline: none !important; }
 
 input:focus, input:active {
-    outline: none !important;
-}
+  outline: none !important; }
 
 nav, footer, header, aside {
-    display: block;
-}
+  display: block; }
 
 html, body {
-    color: black;
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
+  color: black;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
 
 input, button, textarea {
-    font-family: inherit;
-}
+  direction: ltr; }
 
 input::-ms-clear {
-    display: none;
-}
+  display: none; }
 
 button {
-    cursor: pointer;
-}
+  cursor: pointer; }
 
 button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
+  padding: 0;
+  border: 0; }
 
 a, a:visited {
-    text-decoration: none;
-}
+  text-decoration: none; }
 
 a {
-    color: black;
-}
+  color: black; }
 
 a:hover {
-    text-decoration: none;
-}
+  text-decoration: none; }
 
 ul li {
-    list-style: none;
-}
+  list-style: none; }
 
 img {
-    vertical-align: top;
-}
+  vertical-align: top; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
+  font-size: inherit;
+  font-weight: inherit; }
 
 /*--------------------------------------------------*/
 .noscript-alert {
-    color: white;
-    position: absolute;
-    z-index: 1000;
-    background-color: rgba(255, 0, 0, 0.8);
-    left: 50%;
-    top: 50%;
-    padding: 60px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    font-weight: 600;
-    visibility: hidden;
-    opacity: 0;
-    display: none;
-}
+  color: white;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(255, 0, 0, 0.8);
+  left: 50%;
+  top: 50%;
+  padding: 60px;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: 600;
+  visibility: hidden;
+  opacity: 0;
+  display: none; }
 
 /*# sourceMappingURL=../maps/pre.css.map */
