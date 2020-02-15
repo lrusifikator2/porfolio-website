@@ -9,6 +9,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900&display=swap" rel="stylesheet">
+	<script defer src="/build/js/main.js"></script>
+
 	<noscript>
 		<style>
 			.noscript-alert {
@@ -42,19 +44,47 @@
 <div class="contacts">
 	<div class="contacts__inner">
 		<div class="container">
-			<form action="" class="contactme">
+			<div class="contactme">
 				<div class="contactme__inps">
-					<input class="contactme__inp" type="text" placeholder="Your name">
-					<input class="contactme__inp" type="text" placeholder="Your email">
+					<div class="contactme__inpwrapper"  >
+						<input class="contactme__inp" type="text" id="name" placeholder="Your name">
+						<div class="contactme__errorwrapper contactme__errorbg">
+							<div class="contactme__error">
+								<div class="contactme__errorbc"></div> 
+								<span class="error-sign">
+									<span>!</span>
+								</span> 
+								<span class="contactme__text"></span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="contactme__inpwrapper" >
+						<input class="contactme__inp" type="text" id="email" placeholder="Your email">
+						<div class="contactme__errorwrapper contactme__errorbg">
+							<div class="contactme__error">
+								<div class="contactme__errorbc"></div> 
+								<span class="error-sign">
+									<span>!</span>
+								</span> 
+								<span class="contactme__text"></span>
+							</div>
+						</div>
+					</div>
 				</div>
-				<textarea class="contactme__inp contactme__inp_text" name="" id="" placeholder="Your message"></textarea>
-				
-				<button class="contactme__btn" type="submit">Send message</button>
-			</form>
+				<textarea class="contactme__inp contactme__inp_text" id="message" placeholder="Your message"></textarea>
+				<button onclick="submit()" class="contactme__btn" type="submit">Send message</button>
+			</div>
+
+			<div class="thankyou-note">
+				Thank you for contactgin me!
+				<span>To go to the home page <a href="/">click here</a></span>
+			</div>
+
 		</div>
 	</div>
 </div>
 
-<script src="/build/js/main.js"></script>
+
 </body>
 </html>

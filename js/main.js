@@ -89,6 +89,59 @@ function set_animate_link(){
 	}
 }
 
+function check_if_email(str) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str))
+		return (true);
+	return (false);
+}
+
+function submit() {
+	let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfogzpcJWXMB_wCdbBvIsSHNeroCzOmGkX1PoY3gDaGFGwVw/formResponse";
+	let xhttp = new XMLHttpRequest();
+	let mail = document.querySelector("#email").value;
+	let name = document.querySelector("#name").value;
+	let message = document.querySelector("#message").value;
+	
+	if(name === "") {
+		show_error(document.querySelectorAll(".contactme__inpwrapper")[0], "This field is required");
+		return -1;
+	}
+
+	if(mail === "") {
+		show_error(document.querySelectorAll(".contactme__inpwrapper")[1], "This field is required");
+		return -1;
+	}
+
+	if(!check_if_email(mail)) {
+		show_error(document.querySelectorAll(".contactme__inpwrapper")[1], "Should be an actual email address");
+		return -1;
+	}
+
+	xhttp.open("POST", url, true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("emailAddress=" + mail + "&entry.2109138769=" + name + " &entry.1400602646= " + message);
+	animate_form();
+}
+
+function hide_all_errors_contactme() {
+	let errors = document.querySelectorAll(".contactme__inpwrapper"); 
+	
+	for(let i = 0; i < errors.length; i++) {
+		errors[i].querySelector(".contactme__errorwrapper").classList.remove("contactme__showerror");
+	}
+}
+
+function show_error(el, error) {
+	hide_all_errors_contactme();
+	let subel = el.querySelector(".contactme__errorwrapper");
+	subel.classList.add("contactme__showerror");
+	subel.querySelector(".contactme__text").innerText = error;
+}
+
+function animate_form(){
+	document.querySelector(".thankyou-note").classList.add("fadein_anim");
+	document.querySelector(".contactme").classList.add("fadeout_anim");
+}
 
 (function() {
 	let menu = document.querySelector(".menu");
