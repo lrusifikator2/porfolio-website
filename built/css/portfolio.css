@@ -1,0 +1,112 @@
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #333;
+}
+
+.portfolio {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.portfolio__image {
+    background: url("/img/bg3.jpg") no-repeat center center/cover;
+}
+
+.portfolio__blur {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px 40px;
+}
+
+.portfolio__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 150px;
+}
+
+.portfolio__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.portfolio__item {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 500px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.portfolio__img {
+    transition: transform .3s;
+    display: block;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio__img img {
+    display: block;
+    width: 100%;
+}
+
+.portfolio__title {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.portfolio__techstack {
+    padding-top: 20px;
+}
+
+.portfolio__techs {
+    font-weight: 500;
+}
+
+.portfolio__desc {
+    padding-top: 20px;
+    display: block;
+    height: 100px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.portfolio__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__link {
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 2px;
+    transition: background-color .4s;
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+.portfolio__link_demo:hover {
+    background-color: #aaaafa;
+}
+
+.portfolio__link_code:hover {
+    background-color: #faaaaa;
+}
+
+/*# sourceMappingURL=../maps/portfolio.css.map */

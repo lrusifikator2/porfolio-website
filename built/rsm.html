@@ -1,76 +1,65 @@
-<html lang="en">
+<html lang="en" >
 <head>
 	<meta charset="UTF-8">
-	<base href="/">
 	<title>Resume</title>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/menu.css">
-	<link rel="stylesheet" href="css/resume.css">
-	<script defer src="js/main.js"></script>
-
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800,900|Titillium+Web:300,400,600,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat:100,300,400,500,600,700,800,900|PT+Serif:300,400,400i,700,700i|Titillium+Web:300,400,600,700,900|Ubuntu:300,300i,400,400i,500,500i,700&display=swap" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-	<noscript>
-		<style>
-			.noscript-alert {
-				visibility: visible;
-				opacity: 1;
-				display: block;
-			}
-			
-			.body {
-				visibility: hidden;
-			}
-		</style>
-	</noscript>
+	
+	<link rel="stylesheet" href="http://77.68.7.68/build/css/resume.css">
+	<style>
+		.name-title { 
+			width: 800px;
+			margin: 30px auto 9vh auto; 
+		}
+
+		.resume-page { 
+			width: 800px;
+			margin: 0 auto;
+		}
+	</style>
 </head>
 <body>
-<div class="noscript-alert">
-	Your browser doesn't support JavaScript!	
-</div>
 
-@@include('./menu/menu.html')
+<h1 class="name-title">Ruslan Yakushev <span class="name-title__subtitle">Web developer</span> </h1>
 
-<div class="resume">
-	<div class="resume__image">
-		<div class="resume__blur">
-			<div class="container">
-				<h1 class="name-title">Ruslan Yakushev <span class="name-title__subtitle">Web developer</span> </h1>
-				<div class="resume-page">
+<div class="resume-page" style="margin-top: -80px;">
 
 						<div class="resume-page__contacts article">
 							
 							<div class="article__title">Contacts</div>
 							<div class="article__inner">
 								<div class="article__contact">
-									<div class="article__icon">
-										<img src="img/resume/logo/mail.png" alt="">
-									</div>
-									<div class="article__info">yakushev.rusl101@gmail.com</div>
-									
-								</div>
-								<div class="article__contact">
-									<div class="article__icon article__icon_mdl">
-										<img src="img/resume/4.png" alt="">
-									</div>
-									<div class="article__info">github.com/lrusik</div>
-									
-								</div>
-								<div class="article__contact">
-									<div class="article__icon arictle__icon_hlittle">
-										<img src="img/resume/logo/pointer.png" alt="">
-									</div>
-									<div class="article__info">Israel, Qatsrin</div>
-								</div>
+				<div class="article__icon">
+					<img src="http://77.68.7.68/img/resume/logo/mail.png" alt="">
+				</div>
+				<div class="article__info">yakushev.rusl101@gmail.com</div>
+				
+			</div>
+			<div class="article__contact">
+				<div class="article__icon article__icon_mdl" style="margin-left: 20px;">
+					<img src="http://77.68.7.68/img/resume/4.png" alt="">
+				</div>
+				<div class="article__info">github.com/lrusik</div>
+				
+			</div>
+			<div class="article__contact">
+				<div class="article__icon arictle__icon_hlittle">
+					<img src="http://77.68.7.68/img/resume/logo/pointer.png" alt="">
+				</div>
+				<div class="article__info">Israel, Qatsrin</div>
+			</div>
+		</div>
 							</div>
 						</div>
 
-						<div class="resume-page__about article">
+						<div class="resume-page__about article" style="margin-top: -60px;">
 							<div class="article__title">Professional Summary</div>
-							<div class="article__text">
-								Passionate about web development and technologies in general. Knows how to create design and modify web content. Has experience in analyzing customer needs, working with teams and using software for manipulating multimedia content as well as creating web applications from scratch. With the capacity to adapt and learn fast, knows how to apply all stages of web development.
+							<div class="article__text" style="width: 800px; margin-left: auto; margin-right: auto;">
+								Passionate about web development and technologies in general. Knows how to create design and modify web content. 
+								Has experience in analyzing customer needs, working with teams and using software for manipulating multimedia content as well as creating web applications from scratch. With the capacity to adapt and learn fast, knows how to apply all stages of web development.
 							</div>
 						</div>
 						
@@ -121,21 +110,7 @@
 							</div>
 						</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="resume-footer">
-	<div class="container resume-footer__inner">
-		<div class="resume-footer__item"><div class="resume-footer__text"> Download: </div></div>
-		<div class="resume-footer__item"><a href="data/resume.pdf" class="resume-footer__link resume-footer__link_pdf"> pdf </div></a>
-		<div class="resume-footer__item"><a href="data/resume.docx" class="resume-footer__link resume-footer__link_exel">exel</div></a>
-	</div>
-</div>
-
 
 </body>
 </html>
-
 
