@@ -1,6 +1,5 @@
 $error_color: #fc3030;
 
-
 body {
 	background: url('../img/test.jpg') no-repeat center center / cover;
 }
@@ -186,3 +185,4 @@ textarea {
 	to { opacity: 0; } 
 }
 
+@import "resp/resp_contactme.scss";

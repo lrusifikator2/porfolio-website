@@ -1,0 +1,212 @@
+body {
+    background: url("../img/test.jpg") no-repeat center center/cover;
+}
+
+input {
+    display: block;
+}
+
+textarea {
+    display: block;
+}
+
+.contacts {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contacts__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contactme {
+  /* .contactme__inp */
+  /* .contactme__btn */
+}
+
+.contactme__inp {
+    font-size: 18px;
+    border: none;
+    outline: none !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+}
+
+.contactme__inps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactme__inps input:first-child {
+    margin-right: 10px;
+}
+
+.contactme__inp_text {
+    width: 100%;
+    display: block;
+    resize: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 250px;
+}
+
+.contactme__btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    float: right;
+    transition: background .4s, color .4s;
+}
+
+.contactme__btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+.contactme__inpwrapper {
+    position: relative;
+}
+
+.contactme__errorbg {
+    background-color: #fc3030;
+}
+
+.contactme__errorbc {
+    border-color: #fc3030;
+}
+
+.contactme__errorwrapper {
+    display: none;
+    border-radius: 1px;
+    padding: 5px;
+    position: absolute;
+    bottom: -26px;
+    left: 7px;
+}
+
+.contactme__showerror {
+    display: block;
+}
+
+.contactme__error {
+    color: black;
+    z-index: 5;
+    display: flex;
+}
+
+.contactme__error div {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    height: 0;
+    width: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 7px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: none;
+    z-index: 10;
+}
+
+.error-sign {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    margin-right: 10px;
+    margin-left: 7px;
+}
+
+.error-sign span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thankyou-note {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 40px;
+    padding: 15px;
+    opacity: 0;
+    visibility: 0;
+    display: none;
+}
+
+.thankyou-note span {
+    display: block;
+    font-size: 16px;
+    margin-top: 13px;
+}
+
+.thankyou-note a {
+    font-weight: 500;
+}
+
+.fadein_anim {
+    opacity: 1;
+    visibility: 1;
+    display: block;
+    -webkit-animation: fadein .5s forwards;
+    animation: fadein .5s forwards;
+}
+
+.fadeout_anim {
+    opacity: 0;
+    visibility: 0;
+    display: none;
+    -webkit-animation: fadeout .2s forwards;
+    animation: fadeout .2s forwards;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/*# sourceMappingURL=../maps/contactme.css.map */

@@ -9,7 +9,8 @@ const built_path = proj_path + "/"+ built_folder;
 
 const js_version = "es5";
 
-const files_to_ssh = built_path + "/**/*";
+//const files_to_ssh = built_path + "/**/*";
+const files_to_ssh = proj_path + "/docs";
 const sshDir = '/var/www/html/';
 const sshConfig = require('./../gulpfile.js').sshConfig;
 
@@ -193,7 +194,6 @@ function minify_js() {
 }
 
 function minify_fonts() {
-  console.log(fonts_files + min_fonts_dest);
   return src(fonts_files)
     .pipe(dest(min_fonts_dest))
 }

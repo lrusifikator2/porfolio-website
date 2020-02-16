@@ -1,0 +1,28 @@
+@media screen and (max-width: 800px) {
+	.article__inner {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.article__contact {
+		background-color: red;
+		justify-content: flex-start;
+	}
+
+	.article__contact {
+		margin-right: -50px;
+		&:first-child {
+			margin: 0 100px 0 0;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.article__contact {
+		margin: 0 0 0 50px;
+		&:first-child {
+			margin: 0 50px 0 0;
+		}
+	}
+}

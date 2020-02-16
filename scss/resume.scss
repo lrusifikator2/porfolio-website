@@ -7,10 +7,14 @@ body {
 	overflow: auto;
 }
 
+.container {
+	overflow: hidden !important;
+}
+
 .resume {
 	width: 100%;
 	position: relative;
-	
+		
 	&__image {
 		background: url('../img/bg4.jpg') no-repeat center center / cover;
 	}
@@ -65,14 +69,14 @@ body {
 
 .resume-page {
 	padding-bottom: 100px;
-
 }
+
 
 .article {
 	text-align: center;
 	margin-top: 50px;
-	
 }
+
 .article__title {
 	font-size: 28px;
 	font-weight: 300;
@@ -104,7 +108,6 @@ body {
 }
 
 .article__contact {
-	width: 33.334%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -113,6 +116,11 @@ body {
 	-ms-align-items: center;
 	align-items: center;
 	justify-content: center;
+	
+	margin: 0 0 0 200px;
+	&:first-child {
+		margin: 0 200px 0 0;
+	}
 }
 
 .article__icon {
@@ -152,6 +160,7 @@ body {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: center;
 }
 
 
@@ -253,3 +262,5 @@ body {
 		}
 	}
 }
+
+@import "resp/resp_resume.scss";
