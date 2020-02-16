@@ -22,7 +22,7 @@ const sshConfig = {
 };
 */
 
-const min_dir = proj_path + "/min";
+const min_dir = proj_path + "/docs";
 const purify_css_html = built_path +"/**/*.html";
 
 /*------------------------------------- HTML -------------------------------------*/
@@ -157,11 +157,12 @@ function minify_css(){
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(cssPurify(
+    /*.pipe(cssPurify(
       { 
         content: purify_files
       }
     ))
+    */
     .pipe(
       cleanCSS({compatibility: 'ie10', debug: true}, (details) => {
         console.log(`${details.name}: ${details.stats.originalSize}`);
@@ -192,6 +193,7 @@ function minify_js() {
 }
 
 function minify_fonts() {
+  console.log(fonts_files + min_fonts_dest);
   return src(fonts_files)
     .pipe(dest(min_fonts_dest))
 }
@@ -231,17 +233,20 @@ function minify_pages() {
     .pipe(dest(min_pages_dest_dir))
 }
 
+
+function minify_data() {
+  return src(proj_path + "/data/**/*")
+    .pipe(dest(min_dir + "/data"));
+}
+
+
 function minify_all() {
   minify_fonts();
   minify_img();
   minify_pages();
   minify_js();
   minify_css();
-}
-
-function data(){
-  return src(proj_path + "/data/**/*")
-    .pipe(dest(built_path + "/data/"));
+  minify_data();
 }
 
 function compile_all() {
@@ -261,7 +266,6 @@ function initBrowser() {
     },
   });
 }
-
 
 
 function data() {
