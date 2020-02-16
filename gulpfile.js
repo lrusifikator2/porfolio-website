@@ -12,6 +12,7 @@ const js_version = "es5";
 const files_to_ssh = built_path + "/**/*";
 const sshDir = '/var/www/html/';
 const sshConfig = require('./../gulpfile.js').sshConfig;
+
 /*
 const sshConfig = {
   host: '',
@@ -25,29 +26,35 @@ const min_dir = proj_path + "/min";
 const purify_css_html = built_path +"/**/*.html";
 
 /*------------------------------------- HTML -------------------------------------*/
-const pages_files = proj_path + "/pages/**/*.html";
+const pages_files = proj_path + "/pages/*.html";
 const pages_dest_dir = built_path;
 const min_pages_dest_dir = min_dir;
 
+const pages_watch = proj_path + "/pages/**/*.html";
 /*------------------------------------- CSS -------------------------------------*/
 const scss_files = proj_path + "/scss/*.{scss,css}";
 const css_dest_dir = built_path +"/css";
 const min_css_dest_dir = min_dir + "/css";
 
+const scss_watch = proj_path + "/scss/**/*.{scss,css}";
 /*------------------------------------- JS -------------------------------------*/
 const ts_files = proj_path + "/ts/*.{ts,js}";
 const js_dest_dir = built_path +"/js";
 const min_js_dest_dir = min_dir + "/js";
 
+const ts_watch = proj_path + "/ts/**/*.{js,ts}";
 /*------------------------------------- IMG -------------------------------------*/
 const img_files = proj_path + "/img/**/*";
 const img_dest = built_path +"/img";
 const min_img_dest = min_dir +"/img";
 
+const img_watch = proj_path + "/img/**/*";
 /*------------------------------------- FONTS -------------------------------------*/
 const fonts_files = proj_path + "/fonts/**/*";
 const fonts_dest = built_path +"/fonts";
 const min_fonts_dest = min_dir +"/fonts";
+
+const fonts_watch = proj_path + "/fonts/**/*";
 
 /*======================================== PRESET ===============================*/
 /* system */
@@ -232,7 +239,13 @@ function minify_all() {
   minify_css();
 }
 
+function data(){
+  return src(proj_path + "/data/**/*")
+    .pipe(dest(built_path + "/data/"));
+}
+
 function compile_all() {
+  data();
   pages();
   css();
   js();
@@ -248,12 +261,21 @@ function initBrowser() {
     },
   });
 }
+
+
+
+function data() {
+  return src(proj_path + "/data/**/*")
+    .pipe(dest(built_path + "/data"));
+}
+
 function watch() {
-  gwatch(fonts_files, fonts);
-  gwatch(img_files, img);
-  gwatch(pages_files, pages);
-  gwatch(scss_files, css);
-  gwatch(ts_files, js);
+  gwatch(proj_path + "/data/**/*", data);
+  gwatch(fonts_watch, fonts);
+  gwatch(img_watch, img);
+  gwatch(pages_watch, pages);
+  gwatch(scss_watch, css);
+  gwatch(ts_watch, js);
 }
 
 function clean_all(){

@@ -12,7 +12,7 @@ body {
 }
 
 .portfolio__image {
-    background: url("/img/bg3.jpg") no-repeat center center/cover;
+    background: url("../img/bg3.jpg") no-repeat center center/cover;
 }
 
 .portfolio__blur {
