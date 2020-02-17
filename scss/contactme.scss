@@ -13,21 +13,32 @@ textarea {
 	width: 100%;
 }
 
-.contacts {
-
-	width: 100%;
+.contactme {
 	background: url('../img/test.jpg') no-repeat center center / cover;
-	&__inner {
-		padding: 30vh 0;
+	width: 100%;
+	height: 100%;
+
+	&__blur {
 		width: 100%;
+		height: 100%;
 		background-color: rgba(#000, 0.5);
 	}
-}
+	
+	&__inner {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-.contactme {
-	/* .contactme__inp */
-	max-width: 550px;
-	margin: 0 auto;
+		margin: 0 auto;
+	}
+
+	&__cont {
+		max-width: 550px;
+		margin: 0 auto 0 auto;
+		padding-top: 50px;
+	}
 
 	&__inp {
 		font-size: 18px;

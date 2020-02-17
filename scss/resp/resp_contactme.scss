@@ -6,6 +6,24 @@
 
 @media screen and (max-width: 600px) {
 	.contactme {
+		height: auto;
+		width: auto;
+		&__blur {
+			height: auto;
+			width: auto;
+		}
+
+		&__inner { 
+			height: auto;
+			width: auto;
+			display: block;
+			
+		}
+
+		&__cont {
+			padding: 13vh 30px 100px 30px;
+		}
+
 		&__inpwrapper {
 			width: 75%;
 		}
@@ -18,7 +36,8 @@
 				width: 100%;
 			}
 		}
-		padding: 0 30px;
+
+		
 	}
 
 	.container {
@@ -26,5 +45,4 @@
 		padding: 0;
 		width: 100%;
 	}
-
 }
