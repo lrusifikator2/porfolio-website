@@ -1,1 +1,0 @@
-{"version":3,"sources":["rsm.scss"],"names":[],"mappings":"AAAA;EACC,oBAAA,EAAqB;EACrB;IACC,gBAAgB;IAChB,cAAc,EAAA","file":"../scss/rsm.css","sourcesContent":[".rsm {\n\t/* .rsm__container */\n\t&__container {\n\t\tmax-width: 800px;\n\t\tmargin: 0 auto;\n\t}\n}\n"]}

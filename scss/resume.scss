@@ -3,6 +3,8 @@ $resume_main: #aaaaf0;
 $resume_main: #baf0ba;
 $resume_main: #afdfff;
 
+$resume_bggray: #d8d8d8;
+
 body {
 	overflow: auto;
 }
@@ -67,15 +69,26 @@ body {
 	font-weight: 300;
 }
 
-.resume-page {
-	padding-bottom: 100px;
-}
-
-
 .article {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 10px;
+	padding: 20px 0;
 }
+
+.resume-page {
+	padding-bottom: 50px;
+	&__about {
+		background-color: $resume_bggray;
+	}
+
+	&__contacts {
+		
+		margin-top: 0px;
+		padding-top: 0;
+	}
+}
+
+
 
 .article__title {
 	font-size: 28px;
@@ -142,6 +155,7 @@ body {
 
 .article__colortitle {
 	padding: 5px 10px;
+	margin-bottom: 4px;
 	display: inline-block;
 	background-color: $resume_main;	
 	font-size: 19px;
@@ -150,8 +164,9 @@ body {
 }
 
 .article__colortitle_mt {
-	margin-top: 60px;
-	background-color: #bfbfbf;
+	margin-top: 30px;
+	padding: 20px 0;
+	background-color: $resume_bggray;
 }
 
 .article__inner {
@@ -175,6 +190,10 @@ body {
 	border-right: 1px solid #c0c0c0;
 }
 
+.article__item_border_light {
+	border-right: 1px solid white;
+}
+
 .article__opt {
 	font-family: 'Montserrat', sans-serif;
 	display: block;
@@ -182,7 +201,8 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 
-	margin: 5px;
+	margin: 0;
+
 }
 
 .strong {
@@ -192,7 +212,7 @@ body {
 .article__opt_l {
 	width: 20%;
 	padding: 20px 5px;
-	margin-left: 70px;	
+
 }
 
 .article__opt_r {
