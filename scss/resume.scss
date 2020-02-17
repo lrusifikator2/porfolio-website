@@ -9,10 +9,6 @@ body {
 	overflow: auto;
 }
 
-.container {
-	overflow: hidden !important;
-}
-
 .resume {
 	width: 100%;
 	position: relative;
@@ -23,17 +19,18 @@ body {
 
 	&__blur {
 		background-color: rgba(black, 0.7);
-		padding: 50px 40px;
+		padding: 8.9vh 40px 50px 40px;
+		
 	}
 	
 	.container {
 		background-color: rgba(#f0f0f0, .9);
 		overflow: auto;
 		z-index: 5;
-		margin-top: 80px;
+		margin: 50px auto 0 auto;
+		overflow: hidden !important;
 	}
 }
-
 
 .name-title {
 	font-size: 65px;
@@ -88,8 +85,6 @@ body {
 	}
 }
 
-
-
 .article__title {
 	font-size: 28px;
 	font-weight: 300;
@@ -134,6 +129,8 @@ body {
 	&:first-child {
 		margin: 0 200px 0 0;
 	}
+
+	margin: 0;
 }
 
 .article__icon {
@@ -212,7 +209,6 @@ body {
 .article__opt_l {
 	width: 20%;
 	padding: 20px 5px;
-
 }
 
 .article__opt_r {
@@ -243,8 +239,22 @@ body {
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
+		margin: 0 auto;
 	}
 	
+	&__download {
+		width: 33.334%;
+		margin: 0 auto;
+	}
+	&__docs {
+		display: flex;
+		
+		justify-content: space-between;
+		width: 66.66%;
+		margin: 0 auto;
+	}
+
 	&__item {
 		flex: 1 1 0;
 		color: white;

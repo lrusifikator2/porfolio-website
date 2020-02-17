@@ -17,6 +17,13 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
+.cont-container {
+	max-width: 1920px;
+	padding: 0 30px;
+	display: block;
+	margin: 0 auto;
+}
+
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -24,11 +31,11 @@ body {
 	margin: 0 30px;
 }
 
-.cont-container {
-	max-width: 1920px;
-	padding: 0 30px;
-	display: block;
+.middle-container {
+	max-width: 1250px;
 	margin: 0 auto;
+	display: block;
+	margin: 0 30px;
 }
 
 .little-container {
@@ -37,3 +44,5 @@ body {
 	display: block;
 	margin: 0 auto;
 }
+
+@import "resp/resp_main.scss";

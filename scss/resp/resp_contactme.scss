@@ -1,1 +1,30 @@
+@media screen and (max-width: 1100px) {
+}
 
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 600px) {
+	.contactme {
+		&__inpwrapper {
+			width: 75%;
+		}
+
+		&__inps {
+			display: block;
+
+			input {
+				margin-top: 20px;
+				width: 100%;
+			}
+		}
+		padding: 0 30px;
+	}
+
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+}

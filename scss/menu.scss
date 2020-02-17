@@ -9,14 +9,15 @@
 	
 	transition: top .6s;
 	height: 9vh;
-
+	
+	//display: none;
+	
 	&__inner {
 		display: flex;
 		height: 100%;
 	}
 
 	&__item {
-		
 		display: flex;
 		justify-content: center;
 		align-items: center;

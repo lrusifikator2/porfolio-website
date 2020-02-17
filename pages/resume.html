@@ -40,7 +40,7 @@
 	<div class="resume__image">
 		<div class="resume__blur">
 			<div class="container">
-				@@include('./resume/resume_content.html');
+				@@include('./resume/resume_content.html')
 			</div>
 		</div>
 	</div>
@@ -48,9 +48,11 @@
 
 <div class="resume-footer">
 	<div class="container resume-footer__inner">
-		<div class="resume-footer__item"><div class="resume-footer__text"> Download: </div></div>
-		<div class="resume-footer__item"><a href="data/resume.pdf" class="resume-footer__link resume-footer__link_pdf"> pdf </div></a>
-		<div class="resume-footer__item"><a href="data/resume.docx" class="resume-footer__link resume-footer__link_exel">exel</div></a>
+		<div class="resume-footer__item resume-footer__download"><div class="resume-footer__text"> Download: </div></div>
+		<div class="resume-footer__docs">
+			<div class="resume-footer__item"><a href="data/resume.pdf" class="resume-footer__link resume-footer__link_pdf"> pdf </div></a>
+			<div class="resume-footer__item"><a href="data/resume.docx" class="resume-footer__link resume-footer__link_exel">exel</div></a>
+		</div>
 	</div>
 </div>
 

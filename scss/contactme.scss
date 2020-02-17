@@ -1,7 +1,7 @@
 $error_color: #fc3030;
 
 body {
-	background: url('../img/test.jpg') no-repeat center center / cover;
+	overflow: auto;
 }
 
 input  {
@@ -10,25 +10,24 @@ input  {
 
 textarea {
 	display: block;
+	width: 100%;
 }
 
 .contacts {
-	display: block;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
 
-	background-color: rgba(#000, 0.5);
+	width: 100%;
+	background: url('../img/test.jpg') no-repeat center center / cover;
 	&__inner {
+		padding: 30vh 0;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-	}	
+		background-color: rgba(#000, 0.5);
+	}
 }
 
 .contactme {
 	/* .contactme__inp */
+	max-width: 550px;
+	margin: 0 auto;
 
 	&__inp {
 		font-size: 18px;
@@ -41,10 +40,13 @@ textarea {
 	&__inps {
 		display: flex;
 		justify-content: space-between;
-		input:first-child {
-			margin-right: 10px;
+		input {
+			width: 100%;
+			display: block;
 		}
+
 	}
+
 	&__inp_text {
 		width: 100%;
 		display: block;
@@ -68,6 +70,8 @@ textarea {
 
 	&__inpwrapper {
 		position: relative;
+		
+		width: 45%;
 	}
 	
 	&__errorbg {
@@ -78,8 +82,6 @@ textarea {
 		border-color: $error_color;
 	}
 	
-	
-
 	&__errorwrapper {
 		display: none;
 		
@@ -88,8 +90,7 @@ textarea {
 		padding: 5px;
 		position: absolute;
 		bottom: -26px;
-		left: 7px;
-		
+		left: 7px;	
 	}
 	
 	&__showerror {
@@ -118,8 +119,6 @@ textarea {
 			border-top: none;
 			z-index: 10;
 		}
-
-		
 	}
 }
 
