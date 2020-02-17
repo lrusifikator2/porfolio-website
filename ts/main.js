@@ -43,11 +43,12 @@ function add_burger() {
 }
 
 function menu_func(){
+	add_burger();
+	document.querySelector('.side-menu').style.display = "inline-block";
+
 	setTimeout(function() {
 		document.querySelector(".menu").style.top = "-1px";
 	}, 10);
-
-	add_burger();
 }
 
 function main_func(){
