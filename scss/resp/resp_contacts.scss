@@ -3,9 +3,31 @@
 }
 
 @media screen and (max-width: 800px) {
+	.contacts {
+		height: auto;
+		width: auto;
 
+		&__inner {
+			display: block;
+			padding-bottom: 100px;
+			padding-top: 12vh;
+		}
+
+		&__item {
+			margin: 20px auto;
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
+	.contacts {
+		&__inner {
+			display: block;
+			padding: 12vh 30px 50px 30px;
+		}
+	}
+}
 
+.menu {
+	display: none;
 }

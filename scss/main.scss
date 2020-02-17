@@ -45,4 +45,12 @@ body {
 	margin: 0 auto;
 }
 
+
+.tiny-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: block;
+	margin: 0 30px;
+}
+
 @import "resp/resp_main.scss";
