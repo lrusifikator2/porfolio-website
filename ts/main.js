@@ -33,10 +33,10 @@ function add_burger() {
 	document.querySelector('.menu__burger').onclick = function() {
 		if(burger_active) {
 			burger_active = 0;
-			document.querySelector('.side-menu').style.transform = "translateX(-100%)";
+			document.querySelector('.side-menu').style.left = "-300px";
 		} else {
 			burger_active = 1;
-			document.querySelector('.side-menu').style.transform = "translateX(0)";
+			document.querySelector('.side-menu').style.left = "0";
 			
 		}
 	};
@@ -44,7 +44,8 @@ function add_burger() {
 
 function menu_func(){
 	add_burger();
-	document.querySelector('.side-menu').style.display = "inline-block";
+	document.querySelector('.side-menu').style.opacity = "1";
+	
 
 	setTimeout(function() {
 		document.querySelector(".menu").style.top = "-1px";
