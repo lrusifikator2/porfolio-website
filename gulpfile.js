@@ -10,7 +10,7 @@ const built_path = proj_path + "/"+ built_folder;
 const js_version = "es5";
 
 //const files_to_ssh = built_path + "/**/*";
-const files_to_ssh = proj_path + "/docs";
+const files_to_ssh = proj_path + "/docs/**/*";
 const sshDir = '/var/www/html/';
 const sshConfig = require('./../gulpfile.js').sshConfig;
 
