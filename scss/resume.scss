@@ -4,7 +4,7 @@ $resume_main: #baf0ba;
 $resume_main: #afdfff;
 
 $resume_bggray: #d8d8d8;
-$resume_bggray: #f0f0f0;
+$resume_bggray: rgba(#f0f0f0, .3);
 
 body {
 	overflow: auto;
@@ -295,4 +295,4 @@ body {
 	}
 }
 
-//@import "resp/resp_resume.scss";
+@import "resp/resp_resume.scss";
