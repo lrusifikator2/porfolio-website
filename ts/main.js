@@ -157,7 +157,7 @@ function show_error(el, error) {
 
 function animate_form(){
 	document.querySelector(".thankyou-note").classList.add("fadein_anim");
-	document.querySelector(".contactme").classList.add("fadeout_anim");
+	document.querySelector(".contactme__cont").classList.add("fadeout_anim");
 }
 
 (function() {
